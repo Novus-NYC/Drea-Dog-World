@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { business, contact, mainNav, routes } from "@/lib/site-data"
 
@@ -11,8 +12,9 @@ export default function Footer() {
           <div>
             <Link
               href={routes.home}
-              className="font-tag text-3xl text-white no-underline [text-shadow:2px_2px_0_var(--color-red)]"
+              className="inline-flex items-center gap-3 font-tag text-3xl text-white no-underline [text-shadow:2px_2px_0_var(--color-red)]"
             >
+              <Image src="/images/drea-badge.svg" alt="" width={64} height={64} unoptimized />
               {business.name}
             </Link>
             <p className="mt-4 max-w-prose">

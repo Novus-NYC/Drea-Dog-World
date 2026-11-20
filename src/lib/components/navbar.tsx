@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { business, mainNav, primaryCta, routes } from "@/lib/site-data"
@@ -29,9 +30,17 @@ export default function Navbar() {
       <div className="relative mx-auto flex h-header max-w-content items-center justify-between px-gutter">
         <Link
           href={routes.home}
-          className="whitespace-nowrap font-tag text-2xl no-underline [text-shadow:2px_2px_0_var(--color-red)] sm:text-3xl"
+          className="flex items-center gap-3 whitespace-nowrap font-tag text-2xl no-underline [text-shadow:2px_2px_0_var(--color-red)] sm:text-3xl"
           onClick={closeMenu}
         >
+          <Image
+            src="/images/drea-badge.svg"
+            alt=""
+            width={52}
+            height={52}
+            unoptimized
+            preload
+          />
           {business.name}
         </Link>
 
