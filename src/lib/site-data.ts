@@ -1,0 +1,200 @@
+// ---------- Types ----------
+
+export type NavLink = {
+  label: string
+  href: string
+  external?: boolean
+}
+
+export type ContactLink = {
+  display: string
+  href: string
+}
+
+export type IssueTip = {
+  issue: string
+  tip: string
+}
+
+export type Credential = {
+  kind: "Credential" | "Commendation" | "Membership"
+  name: string
+  detail?: string
+  provisional?: boolean
+}
+
+export type PressMention = {
+  outlet: string
+  summary: string
+  // No URLs exist in the reference yet, so this stays optional.
+  url?: string
+  provisional?: boolean
+}
+
+// ---------- Business identity ----------
+
+export const business = {
+  name: "Drea’s Dog World",
+  owner: "Andrea Smith",
+  nickname: "Drea",
+  ownerTitle: "Obedience instructor and professional dog trainer",
+  ownerRole: "Brooklyn’s dog trainer and behavioral consultant",
+  tagline: "Smart love for Brooklyn dogs.",
+  slogan: "Your best friend’s best friend.",
+  serviceArea: "Brooklyn, NY",
+  yearsExperience: "30+",
+  foundedYear: 2002,
+  mission:
+    "To strengthen the partnership between people and dogs through positive, reward-based training, rehabilitation, and socialization.",
+}
+
+// ---------- Contact ----------
+
+export const contact: {
+  phone: ContactLink
+  email: ContactLink
+  instagram: ContactLink
+} = {
+  phone: { display: "323-906-4641", href: "tel:3239064641" },
+  email: {
+    display: "dreadogworld@yahoo.com",
+    href: "mailto:dreadogworld@yahoo.com",
+  },
+  instagram: {
+    display: "@dreadogworld",
+    href: "https://www.instagram.com/dreadogworld/",
+  },
+}
+
+export const blogUrl = "https://dreadogworld.wordpress.com/"
+
+// ---------- Navigation ----------
+
+export const routes = {
+  home: "/",
+  about: "/pages/about",
+  testimonials: "/pages/testimonials",
+  contact: "/pages/contact",
+}
+
+export const primaryCta: NavLink = {
+  label: "Book a session",
+  href: routes.contact,
+}
+
+export const mainNav: NavLink[] = [
+  { label: "Home", href: routes.home },
+  { label: "About", href: routes.about },
+  { label: "Testimonials", href: routes.testimonials },
+  { label: "Blog", href: blogUrl, external: true },
+  { label: "Contact", href: routes.contact },
+]
+
+// ---------- Services and approach ----------
+
+export const services: string[] = [
+  "Obedience",
+  "Rehabilitation",
+  "Socialization",
+]
+
+export const specialties: string[] = [
+  "Stressed dogs",
+  "Fearful dogs",
+  "Reactive dogs",
+  "Rescues",
+  "Bully breeds",
+]
+
+export const fourPs: { name: string; description: string }[] = [
+  { name: "Practice", description: "Short, regular sessions beat one big one." },
+  { name: "Patience", description: "Every dog learns at its own speed." },
+  { name: "Perseverance", description: "Keep going when it gets bumpy." },
+  { name: "Praise", description: "Every lesson starts and ends with it." },
+]
+
+export const trainingMethods: string[] = [
+  "Positive reinforcement",
+  "Corrections that fit your dog’s age, size, and personality",
+  "Boundary setting",
+  "Crate training",
+  "Gradual desensitization",
+  "Never a shock collar",
+]
+
+export const helpsWith: string[] = [
+  "Leash pulling",
+  "Dog aggression",
+  "Human aggression",
+  "Separation anxiety",
+  "Housebreaking",
+  "Jumping",
+  "Barking",
+  "Puppy manners",
+]
+
+export const issueTips: IssueTip[] = [
+  { issue: "Aggression", tip: "To fight food aggression, swap one tasty treat for another." },
+  { issue: "Pulling", tip: "Stop the second the leash tightens. Walk again when it goes slack." },
+  { issue: "Barking", tip: "Reward the quiet, not the noise." },
+  { issue: "Fear", tip: "Let your dog set the pace. Reward every small step closer." },
+  { issue: "Separation anxiety", tip: "Practice short goodbyes. Leave for a minute, come back calm, and build up slowly." },
+  { issue: "Jumping", tip: "Turn away and wait. Greet your dog only when all four paws are on the floor." },
+]
+
+export const contactFormIssues: string[] = [
+  ...issueTips.map((item) => item.issue),
+  "Something else",
+]
+
+// ---------- Background, credentials, and press ----------
+
+export const background: string[] = [
+  "Studied psychology at Mount Vernon College.",
+  "Volunteered with canine rescue after 9/11.",
+  "More than 30 years of working with dogs and their people.",
+  "Started her business in 2002.",
+  "Primary consultant for Molly’s Mutts & Meows.",
+]
+
+export const credentials: Credential[] = [
+  {
+    kind: "Credential",
+    name: "AKC Canine Good Citizen Evaluator",
+    detail: "Certified to evaluate dogs for the CGC title.",
+    provisional: true,
+  },
+  {
+    kind: "Commendation",
+    name: "ASPCA",
+    detail: "Commended for stepping in to stop dog-on-dog aggression.",
+    provisional: true,
+  },
+  {
+    kind: "Membership",
+    name: "APDT",
+    detail: "Association of Professional Dog Trainers.",
+  },
+]
+
+export const press: PressMention[] = [
+  {
+    outlet: "The New York Times",
+    summary:
+      "Ivy Elrod’s “My Dog Was a Nightmare to Walk. These Tools and Techniques Helped.”",
+  },
+  {
+    outlet: "Time",
+    summary: "Praised her input on designing a dog socialization space.",
+    provisional: true,
+  },
+  {
+    outlet: "Narratively: Bad Dog/Good Dog",
+    summary: "Her story, told in Narratively.",
+  },
+  {
+    outlet: "Critter Crusades",
+    summary: "A conversation with Andrea.",
+    provisional: true,
+  },
+]
