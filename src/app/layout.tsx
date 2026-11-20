@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className={fontVariables}>
       <body className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 max-w-6xl mx-auto px-6 py-12">
+        <main className="flex-1">
           {children}
         </main>
         <Footer />

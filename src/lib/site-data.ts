@@ -198,3 +198,19 @@ export const press: PressMention[] = [
     provisional: true,
   },
 ]
+
+// ---------- Video ----------
+
+export type Video = {
+  title: string
+  vimeoId: string
+  duration: string
+  thumbnail: string
+}
+
+export const heroVideo: Video = {
+  title: "Brooklyn Bites Back with Drea Smith",
+  vimeoId: "180978314",
+  duration: "6:37",
+  thumbnail: "/images/brooklyn-bites-back-title-card.jpg",
+}
