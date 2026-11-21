@@ -1,4 +1,4 @@
-import Eyebrow from "@/lib/components/eyebrow"
+import Eyebrow from "@/lib/components/ui/eyebrow"
 import IssueCard from "@/lib/components/home/issue-card"
 import { business, issueTips } from "@/lib/site-data"
 

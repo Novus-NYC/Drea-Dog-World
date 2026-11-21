@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { buttonBase, buttonVariants } from "@/lib/components/button-link"
-import Eyebrow from "@/lib/components/eyebrow"
-import { FacebookIcon, InstagramIcon, YelpIcon } from "@/lib/components/social-icons"
+import { buttonBase, buttonVariants } from "@/lib/components/ui/button-link"
+import Eyebrow from "@/lib/components/ui/eyebrow"
+import { FacebookIcon, InstagramIcon, YelpIcon } from "@/lib/components/icons/social-icons"
 import { blogPosts, blogUrl, contact, instagramPosts } from "@/lib/site-data"
 
 const iconLinks = [

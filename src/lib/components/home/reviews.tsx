@@ -1,5 +1,5 @@
-import ButtonLink from "@/lib/components/button-link"
-import Eyebrow from "@/lib/components/eyebrow"
+import ButtonLink from "@/lib/components/ui/button-link"
+import Eyebrow from "@/lib/components/ui/eyebrow"
 import ReviewRows from "@/lib/components/home/review-rows"
 import { routes, testimonials } from "@/lib/site-data"
 

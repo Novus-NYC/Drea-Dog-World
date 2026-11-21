@@ -1,8 +1,8 @@
 import Image from "next/image"
-import ButtonLink from "@/lib/components/button-link"
-import Eyebrow from "@/lib/components/eyebrow"
-import PawIcon from "@/lib/components/paw-icon"
-import VideoPlayer from "@/lib/components/video-player"
+import ButtonLink from "@/lib/components/ui/button-link"
+import Eyebrow from "@/lib/components/ui/eyebrow"
+import PawIcon from "@/lib/components/icons/paw-icon"
+import VideoPlayer from "@/lib/components/ui/video-player"
 import { business, heroVideo, primaryCta, routes } from "@/lib/site-data"
 
 const quickFacts = [

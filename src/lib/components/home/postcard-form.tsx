@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import BadgeLogo from "@/lib/components/badge-logo"
-import { buttonBase, buttonVariants } from "@/lib/components/button-link"
+import BadgeLogo from "@/lib/components/ui/badge-logo"
+import { buttonBase, buttonVariants } from "@/lib/components/ui/button-link"
 import { business, contact, dogAges, trainingNeeds, trainingTypes } from "@/lib/site-data"
 
 type Errors = {

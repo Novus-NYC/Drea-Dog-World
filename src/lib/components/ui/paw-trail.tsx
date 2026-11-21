@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import PawIcon from "@/lib/components/paw-icon"
+import PawIcon from "@/lib/components/icons/paw-icon"
 
 const steps = [0, 1, 2, 3, 4, 5]
 

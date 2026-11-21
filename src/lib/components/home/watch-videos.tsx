@@ -1,4 +1,4 @@
-import Eyebrow from "@/lib/components/eyebrow"
+import Eyebrow from "@/lib/components/ui/eyebrow"
 import WatchPlaylist from "@/lib/components/home/watch-playlist"
 import { watchVideos } from "@/lib/site-data"
 

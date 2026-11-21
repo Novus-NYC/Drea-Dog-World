@@ -1,4 +1,4 @@
-import Eyebrow from "@/lib/components/eyebrow"
+import Eyebrow from "@/lib/components/ui/eyebrow"
 import PostcardForm from "@/lib/components/home/postcard-form"
 import { business, contact } from "@/lib/site-data"
 
@@ -7,7 +7,7 @@ const contactWays = [
   { label: "Email", value: contact.email.display, href: contact.email.href }
 ]
 
-export default function ContactSection() {
+export default function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="pb-24 pt-20 lg:pb-[110px] lg:pt-24">
       <div className="mx-auto max-w-content px-gutter">

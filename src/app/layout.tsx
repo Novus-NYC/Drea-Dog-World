@@ -1,8 +1,8 @@
 import "./globals.css"
 import type { Metadata } from "next"
 import { Fraunces, Work_Sans } from "next/font/google"
-import Navbar from "@/lib/components/navbar"
-import Footer from "@/lib/components/footer"
+import Navbar from "@/lib/components/layout/navbar"
+import Footer from "@/lib/components/layout/footer"
 import { business } from "@/lib/site-data"
 
 const fraunces = Fraunces({ style: ["normal", "italic"], axes: ["opsz"], subsets: ["latin"], variable: "--font-fraunces", display: "swap" })

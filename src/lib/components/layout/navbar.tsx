@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import BadgeLogo from "@/lib/components/badge-logo"
+import BadgeLogo from "@/lib/components/ui/badge-logo"
 import { business, mainNav, primaryCta, routes } from "@/lib/site-data"
 
 export default function Navbar() {

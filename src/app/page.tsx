@@ -1,6 +1,6 @@
 import AboutPreview from "@/lib/components/home/about-preview"
 import CommonIssues from "@/lib/components/home/common-issues"
-import ContactSection from "@/lib/components/home/contact-section"
+import Contact from "@/lib/components/home/contact"
 import Hero from "@/lib/components/home/hero"
 import PressClippings from "@/lib/components/home/press-clippings"
 import Reviews from "@/lib/components/home/reviews"
@@ -17,7 +17,7 @@ export default function HomePage() {
       <PressClippings />
       <Reviews />
       <Socials />
-      <ContactSection />
+      <Contact />
     </>
   )
 }

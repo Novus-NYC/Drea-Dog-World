@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Eyebrow from "@/lib/components/eyebrow"
-import VideoPlayer from "@/lib/components/video-player"
+import Eyebrow from "@/lib/components/ui/eyebrow"
+import VideoPlayer from "@/lib/components/ui/video-player"
 import type { Video } from "@/lib/site-data"
 
 type WatchPlaylistProps = {

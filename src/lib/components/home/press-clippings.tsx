@@ -1,7 +1,7 @@
 import Image from "next/image"
-import ButtonLink from "@/lib/components/button-link"
-import Eyebrow from "@/lib/components/eyebrow"
-import PawTrail from "@/lib/components/paw-trail"
+import ButtonLink from "@/lib/components/ui/button-link"
+import Eyebrow from "@/lib/components/ui/eyebrow"
+import PawTrail from "@/lib/components/ui/paw-trail"
 import { press, routes, type PressMention } from "@/lib/site-data"
 
 const credentialStrip = [

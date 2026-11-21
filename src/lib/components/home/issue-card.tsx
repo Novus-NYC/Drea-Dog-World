@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import PawIcon from "@/lib/components/paw-icon"
+import PawIcon from "@/lib/components/icons/paw-icon"
 import type { IssueTip } from "@/lib/site-data"
 
 type IssueCardProps = {
