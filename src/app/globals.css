@@ -3,24 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Core palette */
-  --color-ink: #0b0b0b;        /* primary text, header, footer, hard shadows */
-  --color-red: #e8352b;        /* brand red: accents, large display type, decoration */
-  --color-red-deep: #c1201a;   /* action and small red text: passes AA contrast with white */
-  --color-blue: #3a5dae;       /* supplemental: bully breeds band, tip backs */
+  /* Core palette: Brooklyn brownstone */
+  --color-ink: #2b2321;        /* primary text, header, footer, frame outlines */
+  --color-red: #a9533f;        /* brownstone terracotta: main buttons, accents */
+  --color-red-deep: #8a3f2e;   /* small terracotta text and hover states */
+  --color-blue: #2f4b6e;       /* supplemental navy: eyebrows, secondary accents */
+  --color-deep: #4a2f27;       /* dark brown panels */
 
   /* Neutrals */
-  --color-paper: #e5e8e6;      /* page canvas */
-  --color-sheet: #fafaf8;      /* raised surfaces: cards, forms, torn sheets */
-  --color-band: #cdd3d0;       /* grey section band */
-  --color-mist: #bfc6c3;       /* footer skyline strip */
-  --color-skyline: #9fa8a5;    /* background buildings */
-  --color-steel: #4f5755;      /* muted text */
-  --color-line: #b9c0bd;       /* borders and dividers */
+  --color-paper: #f6eee8;      /* page canvas */
+  --color-sheet: #fffaf5;      /* raised surfaces: cards, forms */
+  --color-band: #efe0d5;       /* soft warm section band */
+  --color-mist: #e3d2c6;       /* footer skyline strip */
+  --color-skyline: #c9b3a6;    /* background buildings */
+  --color-steel: #6e5f58;      /* muted text */
+  --color-line: #e3d2c6;       /* borders and dividers */
 
   /* Small accents */
-  --color-window: #f5c84b;     /* lit skyline windows */
-  --color-blush: #ff8b83;      /* red-tinted text on dark backgrounds */
+  --color-window: #f3c9a8;     /* lit skyline windows */
+  --color-blush: #f3c9a8;      /* warm text on dark backgrounds */
 
   /* Layout */
   --header-height: 64px;
@@ -40,7 +41,7 @@
   h1,
   h2,
   h3 {
-    @apply font-display font-normal uppercase leading-display;
+    @apply font-display font-semibold leading-display tracking-[-0.01em];
   }
 
   a {
@@ -85,6 +86,28 @@
     mix-blend-mode: multiply;
     opacity: 0.4;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 -.25'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  /* Italic serif accent word inside a heading, like "Andrea." */
+  .accent {
+    font-family: var(--font-fraunces), Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--color-red);
+  }
+
+  /* Photo or video frame: thin outline plus a second outline offset behind it.
+     Change --frame-x, --frame-y and --frame-color per frame to vary the offset. */
+  .frame {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color-ink);
+    border-radius: 1rem;
+    box-shadow:
+      var(--frame-x, 10px) var(--frame-y, 10px) 0 -2px var(--frame-bg, var(--color-paper)),
+      var(--frame-x, 10px) var(--frame-y, 10px) 0 0 var(--frame-color, var(--color-ink));
   }
 }
 
