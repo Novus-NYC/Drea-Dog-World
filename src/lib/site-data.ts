@@ -157,10 +157,25 @@ export const issueTips: IssueTip[] = [
   { issue: "Jumping", tip: "Turn away and wait. Greet your dog only when all four paws are on the floor." },
 ]
 
-export const contactFormIssues: string[] = [
-  ...issueTips.map((item) => item.issue),
-  "Something else",
+export const trainingTypes: string[] = [
+  "Private dog training",
+  "Dog boarding and training",
+  "Group dog training",
+  "Puppy socialization classes",
 ]
+
+export const trainingNeeds: string[] = [
+  "Agility",
+  "Behavioral (aggression, anxiety, etc.)",
+  "Obedience (sit, stay, come, etc.)",
+  "Protection or guarding",
+  "Service dog",
+  "Therapy dog",
+  "Tracking or scent work",
+  "Other",
+]
+
+export const dogAges: string[] = ["Adult dog (1+ years old)", "Puppy (less than 1 year old)"]
 
 // ---------- Background, credentials, and press ----------
 

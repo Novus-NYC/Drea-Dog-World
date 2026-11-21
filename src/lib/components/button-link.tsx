@@ -7,17 +7,17 @@ type ButtonLinkProps = {
   className?: string
 }
 
-const base =
+export const buttonBase =
   "inline-block rounded-full px-6 py-3.5 font-semibold no-underline transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5"
 
-const variants = {
+export const buttonVariants = {
   primary: "bg-red text-white shadow-button hover:bg-red-deep hover:shadow-button-hover",
   secondary: "bg-sheet text-ink shadow-[inset_0_0_0_2px_var(--color-ink)]",
 }
 
 export default function ButtonLink({ href, children, variant = "primary", className = "" }: ButtonLinkProps) {
   return (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`}>
+    <Link href={href} className={`${buttonBase} ${buttonVariants[variant]} ${className}`}>
       {children}
     </Link>
   )
