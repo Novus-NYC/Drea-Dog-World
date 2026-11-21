@@ -24,8 +24,9 @@ export type Credential = {
 
 export type PressMention = {
   outlet: string
-  summary: string
-  // No URLs exist in the reference yet, so this stays optional.
+  logo: string
+  headline: string
+  note: string
   url?: string
 }
 
@@ -176,20 +177,30 @@ export const credentials: Credential[] = [
 export const press: PressMention[] = [
   {
     outlet: "The New York Times",
-    summary:
-      "Ivy Elrod’s “My Dog Was a Nightmare to Walk. These Tools and Techniques Helped.”",
+    logo: "nyt",
+    headline: "My Dog Was a Nightmare to Walk. These Tools and Techniques Helped.",
+    note: "Wirecutter, by Ivy Elrod",
+    url: "https://www.nytimes.com/wirecutter/reviews/dog-leash-training/",
   },
   {
-    outlet: "Time",
-    summary: "Praised her input on designing a dog socialization space.",
+    outlet: "Narratively",
+    logo: "/images/press-narratively.png",
+    headline: "Bad Dog/Good Dog",
+    note: "Profile and short film",
+    url: "https://www.narratively.com/p/bad-doggood-dog",
   },
   {
-    outlet: "Narratively: Bad Dog/Good Dog",
-    summary: "Her story, told in Narratively.",
+    outlet: "ShoutoutAtlanta",
+    logo: "/images/press-shoutoutatlanta.png",
+    headline: "Meet Andrea Smith, Professional Dog Trainer, Producer",
+    note: "Interview, 2023",
+    url: "https://shoutoutatlanta.com/meet-andrea-smith-professional-dog-trainer-producer/",
   },
   {
-    outlet: "Critter Crusades",
-    summary: "A conversation with Andrea.",
+    outlet: "Time Magazine",
+    logo: "time",
+    headline: "A Brooklyn dog spa’s socialization space, designed with Andrea’s input",
+    note: "Mention",
   },
 ]
 
