@@ -20,7 +20,6 @@ export type Credential = {
   kind: "Credential" | "Commendation" | "Membership"
   name: string
   detail?: string
-  provisional?: boolean
 }
 
 export type PressMention = {
@@ -28,7 +27,6 @@ export type PressMention = {
   summary: string
   // No URLs exist in the reference yet, so this stays optional.
   url?: string
-  provisional?: boolean
 }
 
 // ---------- Business identity ----------
@@ -162,13 +160,11 @@ export const credentials: Credential[] = [
     kind: "Credential",
     name: "AKC Canine Good Citizen Evaluator",
     detail: "Certified to evaluate dogs for the CGC title.",
-    provisional: true,
   },
   {
     kind: "Commendation",
     name: "ASPCA",
     detail: "Commended for stepping in to stop dog-on-dog aggression.",
-    provisional: true,
   },
   {
     kind: "Membership",
@@ -186,7 +182,6 @@ export const press: PressMention[] = [
   {
     outlet: "Time",
     summary: "Praised her input on designing a dog socialization space.",
-    provisional: true,
   },
   {
     outlet: "Narratively: Bad Dog/Good Dog",
@@ -195,7 +190,6 @@ export const press: PressMention[] = [
   {
     outlet: "Critter Crusades",
     summary: "A conversation with Andrea.",
-    provisional: true,
   },
 ]
 

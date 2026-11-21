@@ -119,6 +119,32 @@
     pointer-events: none;
     transform: translate(var(--frame-x, 10px), var(--frame-y, 10px));
   }
+
+  /* Frame add-ons, used on top of .frame */
+
+  /* Thin cream line just inside the photo edge */
+  .frame-inset::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    z-index: 1;
+    border: 1.5px solid var(--color-sheet);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+
+  /* Swaps the hairline offset for a brownstone brick pattern */
+  .frame-brick::before {
+    border: 0;
+    opacity: 0.85;
+    background-color: var(--color-red);
+    background-image:
+      linear-gradient(var(--color-sheet) 2px, transparent 2px),
+      linear-gradient(90deg, var(--color-sheet) 2px, transparent 2px),
+      linear-gradient(90deg, var(--color-sheet) 2px, transparent 2px);
+    background-size: 100% 16px, 32px 32px, 32px 32px;
+    background-position: 0 0, 0 0, 16px 16px;
+  }
 }
 
 @layer components {
