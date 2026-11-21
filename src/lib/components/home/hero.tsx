@@ -1,5 +1,6 @@
 import Image from "next/image"
-import Link from "next/link"
+import ButtonLink from "@/lib/components/button-link"
+import Eyebrow from "@/lib/components/eyebrow"
 import PawIcon from "@/lib/components/paw-icon"
 import VideoPlayer from "@/lib/components/video-player"
 import { business, heroVideo, primaryCta, routes } from "@/lib/site-data"
@@ -10,17 +11,12 @@ const quickFacts = [
   "Never a shock collar",
 ]
 
-const buttonBase =
-  "inline-block border-2 border-ink px-5 py-3 font-semibold no-underline shadow-hard-sm transition-[transform,box-shadow] duration-200 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_var(--color-ink)]"
-
 export default function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="grain overflow-hidden">
       <div className="relative z-[1] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[150px] pt-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-11 lg:pb-[215px] lg:pt-14">
         <div>
-          <p className="mb-3 flex items-center gap-2.5 text-eyebrow font-semibold uppercase text-red-deep before:h-1 before:w-[34px] before:bg-current before:content-['']">
-            Brooklyn dog trainer
-          </p>
+          <Eyebrow>Brooklyn dog trainer</Eyebrow>
 
           <h1 id="hero-heading" className="text-display">
             Smart love for{" "}
@@ -36,12 +32,10 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Link href={primaryCta.href} className={`${buttonBase} bg-red-deep text-white`}>
-              {primaryCta.label}
-            </Link>
-            <Link href={routes.about} className={`${buttonBase} bg-sheet text-ink`}>
+            <ButtonLink href={primaryCta.href}>{primaryCta.label}</ButtonLink>
+            <ButtonLink href={routes.about} variant="secondary">
               Meet {business.nickname}
-            </Link>
+            </ButtonLink>
           </div>
         </div>
 
