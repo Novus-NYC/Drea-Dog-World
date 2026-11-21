@@ -58,7 +58,7 @@ export default function VideoPlayer({ video, preload = false, sticker, frameClas
           <span className="absolute right-3 top-3 rounded-md bg-ink px-2 py-0.5 text-small text-white">
             {video.duration}
           </span>
-          <span className="absolute bottom-2.5 left-3 max-w-[calc(100%-7.5rem)] rounded-md bg-ink px-2.5 py-1 text-left text-small font-semibold text-white">
+          <span className="absolute bottom-2.5 left-3 hidden max-w-[calc(100%-7.5rem)] rounded-md bg-ink sm:block px-2.5 py-1 text-left text-small font-semibold text-white">
             {video.title}
           </span>
           <span className="absolute bottom-[8%] right-[5%] grid h-[68px] w-[68px] place-items-center rounded-full bg-red shadow-lift transition-transform duration-200 group-hover:-rotate-6 group-hover:scale-110 lg:h-[86px] lg:w-[86px]">
