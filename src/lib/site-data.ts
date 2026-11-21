@@ -19,7 +19,9 @@ export type IssueTip = {
 export type Credential = {
   kind: "Credential" | "Commendation" | "Membership"
   name: string
-  detail?: string
+  label: string
+  detail: string
+  badge?: { src: string; alt: string }
 }
 
 export type PressMention = {
@@ -191,17 +193,22 @@ export const credentials: Credential[] = [
   {
     kind: "Credential",
     name: "AKC Canine Good Citizen Evaluator",
+    label: "AKC Canine Good Citizen Evaluator",
     detail: "Certified to evaluate dogs for the CGC title.",
-  },
-  {
-    kind: "Commendation",
-    name: "ASPCA",
-    detail: "Commended for stepping in to stop dog-on-dog aggression.",
+    badge: { src: "/images/badge-akc-cgc.png", alt: "AKC Canine Good Citizen Evaluator badge" },
   },
   {
     kind: "Membership",
     name: "APDT",
+    label: "Member, Association of Professional Dog Trainers",
     detail: "Association of Professional Dog Trainers.",
+    badge: { src: "/images/badge-apdt.png", alt: "Association of Professional Dog Trainers member badge" },
+  },
+  {
+    kind: "Commendation",
+    name: "ASPCA",
+    label: "Commended by the ASPCA",
+    detail: "Commended for stepping in to stop dog-on-dog aggression.",
   },
 ]
 

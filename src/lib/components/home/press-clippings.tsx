@@ -2,13 +2,7 @@ import Image from "next/image"
 import ButtonLink from "@/lib/components/ui/button-link"
 import Eyebrow from "@/lib/components/ui/eyebrow"
 import PawTrail from "@/lib/components/ui/paw-trail"
-import { press, routes, type PressMention } from "@/lib/site-data"
-
-const credentialStrip = [
-  { badge: "/images/badge-akc-cgc.png", label: "AKC Canine Good Citizen Evaluator" },
-  { badge: "/images/badge-apdt.png", label: "Member, Association of Professional Dog Trainers" },
-  { badge: null, label: "Commended by the ASPCA" },
-]
+import { credentials, press, routes, type PressMention } from "@/lib/site-data"
 
 function OutletLogo({ item }: { item: PressMention }) {
   if (item.logo === "nyt") {
@@ -107,11 +101,11 @@ export default function PressClippings() {
             Credentials and commendations
           </p>
           <ul className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-10">
-            {credentialStrip.map((item) => (
-              <li key={item.label} className="flex items-center gap-3 text-[0.9375rem] font-semibold leading-snug">
+            {credentials.map((item) => (
+              <li key={item.name} className="flex items-center gap-3 text-[0.9375rem] font-semibold leading-snug">
                 {item.badge ? (
                   <Image
-                    src={item.badge}
+                    src={item.badge.src}
                     alt=""
                     width={40}
                     height={40}

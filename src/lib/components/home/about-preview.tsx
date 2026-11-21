@@ -2,7 +2,7 @@ import Image from "next/image"
 import ButtonLink from "@/lib/components/ui/button-link"
 import Eyebrow from "@/lib/components/ui/eyebrow"
 import PawIcon from "@/lib/components/icons/paw-icon"
-import { business, routes } from "@/lib/site-data"
+import { business, credentials, routes } from "@/lib/site-data"
 
 const highlights = [
   "Working with dogs for more than 30 years",
@@ -11,10 +11,7 @@ const highlights = [
   "Bully breeds need love too",
 ]
 
-const badges = [
-  { src: "/images/badge-akc-cgc.png", alt: "AKC Canine Good Citizen Evaluator badge" },
-  { src: "/images/badge-apdt.png", alt: "Association of Professional Dog Trainers member badge" },
-]
+const badges = credentials.flatMap((item) => (item.badge ? [item.badge] : []))
 
 export default function AboutPreview() {
   return (
