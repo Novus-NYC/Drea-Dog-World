@@ -2,9 +2,16 @@ import Image from "next/image"
 import Link from "next/link"
 import BadgeLogo from "@/lib/components/badge-logo"
 import InstagramIcon from "@/lib/components/instagram-icon"
+import { FacebookIcon, YelpIcon } from "@/lib/components/social-icons"
 import { business, contact, mainNav, routes } from "@/lib/site-data"
 
 const linkClass = "inline-block py-1 no-underline hover:text-white hover:underline"
+
+const socialLinks = [
+  { label: "Instagram", href: contact.instagram.href, Icon: InstagramIcon },
+  { label: "Facebook", href: contact.facebook.href, Icon: FacebookIcon },
+  { label: "Yelp", href: contact.yelp.href, Icon: YelpIcon },
+]
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -29,15 +36,21 @@ export default function Footer() {
               {business.owner}, {business.ownerTitle.toLowerCase()}. Serving
               Brooklyn’s pups for over 30 years.
             </p>
-            <a
-              href={contact.instagram.href}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3.5 py-2.5 font-semibold text-white no-underline transition-colors hover:bg-white hover:text-ink"
-            >
-              <InstagramIcon className="h-5 w-5" />
-              Instagram
-            </a>
+            <ul className="mt-5 flex flex-wrap gap-2.5">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-white/5 px-3.5 py-2.5 font-semibold text-white no-underline transition-colors hover:bg-white hover:text-ink"
+                  >
+                    <Icon className="h-5 w-5" />
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

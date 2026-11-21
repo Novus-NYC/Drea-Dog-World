@@ -59,6 +59,8 @@ export const contact: {
   phone: ContactLink
   email: ContactLink
   instagram: ContactLink
+  facebook: ContactLink
+  yelp: ContactLink
 } = {
   phone: { display: "323-906-4641", href: "tel:3239064641" },
   email: {
@@ -68,6 +70,14 @@ export const contact: {
   instagram: {
     display: "@dreadogworld",
     href: "https://www.instagram.com/dreadogworld/",
+  },
+  facebook: {
+    display: "Facebook",
+    href: "https://www.facebook.com/1267207203303091",
+  },
+  yelp: {
+    display: "Yelp",
+    href: "https://www.yelp.com/biz/drea-dog-world-brooklyn",
   },
 }
 
@@ -249,6 +259,59 @@ export const testimonials: Testimonial[] = [
     name: "Molly Wootton",
     role: "Molly’s Mutts & Meows",
     quote: "She is outstanding, reliable and very good at her job.",
+  },
+]
+
+// ---------- Socials ----------
+
+export type InstagramPost = {
+  image: string
+  alt: string
+  href: string
+}
+
+export const instagramPosts: InstagramPost[] = [
+  {
+    image: "/images/ig-rainy-sidewalk.jpg",
+    alt: "A puppy and a Rottweiler on a rainy Brooklyn sidewalk",
+    href: "https://www.instagram.com/p/Dfiky9SRmA_/",
+  },
+  {
+    image: "/images/ig-backyard-training.jpg",
+    alt: "Andrea training a puppy and a Rottweiler in a backyard",
+    href: "https://www.instagram.com/p/DfFTZQARuCc/",
+  },
+  {
+    image: "/images/ig-sidewalk-pit-bull.jpg",
+    alt: "Andrea sitting on a Brooklyn sidewalk with a pit bull",
+    href: "https://www.instagram.com/p/DfE5MuOx9og/",
+  },
+  {
+    image: "/images/ig-pond-walk.jpg",
+    alt: "Andrea walking a puppy beside a pond full of geese",
+    href: "https://www.instagram.com/p/DdNJJ5ARlri/",
+  },
+  {
+    image: "/images/ig-rescue-dog.jpg",
+    alt: "A search and rescue dog carried on a rope line at Ground Zero",
+    href: "https://www.instagram.com/p/DdHl7YTyWMy/",
+  },
+  {
+    image: "/images/ig-brick-wall-poodle.jpg",
+    alt: "Andrea holding a curly poodle mix against a brick wall",
+    href: "https://www.instagram.com/p/DbdYcJmxRvG/",
+  },
+]
+
+export const blogPosts: { title: string; href: string }[] = [
+  { title: "Why Do Dogs Bite?", href: "https://dreadogworld.wordpress.com/2010/12/13/why-do-dogs-bite/" },
+  {
+    title: "Why I Hate Shock Collars",
+    href: "https://dreadogworld.wordpress.com/2010/12/10/why-i-hate-shock-collars/",
+  },
+  {
+    title: "Does Your Dog Have Bad Breath?",
+    href: "https://dreadogworld.wordpress.com/2010/12/01/does-your-dog-have-bad-breath/",
   },
 ]
 
