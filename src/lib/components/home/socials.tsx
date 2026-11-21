@@ -1,7 +1,7 @@
 import Image from "next/image"
+import { buttonBase, buttonVariants } from "@/lib/components/button-link"
 import Eyebrow from "@/lib/components/eyebrow"
-import InstagramIcon from "@/lib/components/instagram-icon"
-import { FacebookIcon, YelpIcon } from "@/lib/components/social-icons"
+import { FacebookIcon, InstagramIcon, YelpIcon } from "@/lib/components/social-icons"
 import { blogPosts, blogUrl, contact, instagramPosts } from "@/lib/site-data"
 
 const iconLinks = [
@@ -30,7 +30,7 @@ export default function Socials() {
               href={contact.instagram.href}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-red px-6 py-3.5 font-semibold text-white no-underline shadow-button transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5 hover:bg-red-deep hover:shadow-button-hover"
+              className={`${buttonBase} ${buttonVariants.primary}`}
             >
               <InstagramIcon className="h-5 w-5" />
               Follow {contact.instagram.display}

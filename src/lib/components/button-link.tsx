@@ -8,7 +8,7 @@ type ButtonLinkProps = {
 }
 
 export const buttonBase =
-  "inline-block rounded-full px-6 py-3.5 font-semibold no-underline transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5"
+  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-semibold no-underline transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-0.5"
 
 export const buttonVariants = {
   primary: "bg-red text-white shadow-button hover:bg-red-deep hover:shadow-button-hover",

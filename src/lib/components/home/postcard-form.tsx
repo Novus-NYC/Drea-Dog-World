@@ -11,7 +11,7 @@ type Errors = {
 }
 
 const inputClass =
-  "w-full border-0 border-b-2 border-mist bg-transparent px-0.5 py-2 text-ink placeholder:text-steel focus:border-blue focus:outline-none aria-[invalid=true]:border-red-deep"
+  "w-full border-0 border-b-2 border-line bg-transparent px-0.5 py-2 text-ink placeholder:text-steel focus:border-blue focus:outline-none aria-[invalid=true]:border-red-deep"
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -206,7 +206,7 @@ export default function PostcardForm() {
               aria-invalid={Boolean(errors.message)}
               aria-describedby={errors.message ? "postcard-message-error" : undefined}
               placeholder="Your dog’s name, age, breed, and what’s going on."
-              className="mt-1 min-h-[224px] flex-1 resize-y border-0 bg-transparent bg-[linear-gradient(transparent_31px,var(--color-mist)_32px)] bg-[length:100%_32px] px-1 leading-[32px] text-ink placeholder:text-steel focus:shadow-[inset_0_-2px_0_var(--color-blue)] focus:outline-none aria-[invalid=true]:shadow-[inset_0_-2px_0_var(--color-red-deep)]"
+              className="mt-1 min-h-[224px] flex-1 resize-y border-0 bg-transparent bg-[linear-gradient(transparent_31px,var(--color-line)_32px)] bg-[length:100%_32px] px-1 leading-[32px] text-ink placeholder:text-steel focus:shadow-[inset_0_-2px_0_var(--color-blue)] focus:outline-none aria-[invalid=true]:shadow-[inset_0_-2px_0_var(--color-red-deep)]"
             />
             {errors.message && (
               <p id="postcard-message-error" className="mt-2 text-small font-semibold text-red-deep">

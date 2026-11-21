@@ -14,14 +14,11 @@
   --color-paper: #f6eee8;      /* page canvas */
   --color-sheet: #fffaf5;      /* raised surfaces: cards, forms */
   --color-band: #efe0d5;       /* soft warm section band */
-  --color-mist: #e3d2c6;       /* footer skyline strip */
-  --color-skyline: #c9b3a6;    /* background buildings */
   --color-steel: #6e5f58;      /* muted text */
-  --color-line: #e3d2c6;       /* borders and dividers */
+  --color-line: #e3d2c6;       /* borders, dividers, form underlines */
 
   /* Small accents */
-  --color-window: #f3c9a8;     /* lit skyline windows */
-  --color-blush: #f3c9a8;      /* warm text on dark backgrounds */
+  --color-blush: #f3c9a8;      /* warm text and focus rings on dark backgrounds */
 
   /* Layout */
   --header-height: 64px;
@@ -73,6 +70,8 @@
 }
 
 @layer components {
+  /* ---------- Shared brand pieces ---------- */
+
   .accent {
     font-family: var(--font-fraunces), Georgia, serif;
     font-style: italic;
@@ -145,15 +144,14 @@
     background-size: 100% 16px, 32px 32px, 32px 32px;
     background-position: 0 0, 0 0, 16px 16px;
   }
-}
 
-@layer components {
+  /* Torn paper edge between sections */
   .torn-edges {
     clip-path: polygon(0 24px, 6% 6px, 14% 22px, 25% 4px, 38% 20px, 52% 5px, 66% 21px, 79% 4px, 90% 20px, 100% 6px, 100% calc(100% - 18px), 92% 100%, 80% calc(100% - 14px), 64% 100%, 48% calc(100% - 18px), 30% 100%, 14% calc(100% - 12px), 0 100%);
   }
-}
 
-@layer components {
+  /* ---------- Paw trail (press section) ---------- */
+
   .paw-step {
     display: block;
     opacity: 0;
@@ -171,20 +169,9 @@
       transform: rotate(-8deg);
     }
   }
-}
 
-@keyframes paw-step {
-  from {
-    opacity: 0;
-    transform: scale(1.7) rotate(-18deg);
-  }
-  to {
-    opacity: 0.85;
-    transform: rotate(-8deg);
-  }
-}
+  /* ---------- Review rows (reviews section) ---------- */
 
-@layer components {
   .review-row {
     overflow: hidden;
     mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
@@ -221,15 +208,9 @@
       animation: none;
     }
   }
-}
 
-@keyframes review-slide {
-  to {
-    transform: translateX(-50%);
-  }
-}
+  /* ---------- Postcard form (contact section) ---------- */
 
-@layer components {
   .postcard {
     transition: transform 260ms ease-in;
   }
@@ -266,6 +247,25 @@
       transition: none;
       animation: none;
     }
+  }
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes paw-step {
+  from {
+    opacity: 0;
+    transform: scale(1.7) rotate(-18deg);
+  }
+  to {
+    opacity: 0.85;
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes review-slide {
+  to {
+    transform: translateX(-50%);
   }
 }
 

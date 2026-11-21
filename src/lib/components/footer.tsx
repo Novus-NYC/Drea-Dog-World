@@ -1,8 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import BadgeLogo from "@/lib/components/badge-logo"
-import InstagramIcon from "@/lib/components/instagram-icon"
-import { FacebookIcon, YelpIcon } from "@/lib/components/social-icons"
+import { FacebookIcon, InstagramIcon, YelpIcon } from "@/lib/components/social-icons"
 import { business, contact, mainNav, routes } from "@/lib/site-data"
 
 const linkClass = "inline-block py-1 no-underline hover:text-white hover:underline"
