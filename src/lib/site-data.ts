@@ -197,14 +197,41 @@ export const press: PressMention[] = [
 
 export type Video = {
   title: string
-  vimeoId: string
+  provider: "vimeo" | "youtube"
+  videoId: string
   duration: string
   thumbnail: string
 }
 
 export const heroVideo: Video = {
   title: "Bad Dog/Good Dog",
-  vimeoId: "82690809",
+  provider: "vimeo",
+  videoId: "82690809",
   duration: "4:19",
   thumbnail: "/images/drea-apartment.jpg",
 }
+
+export const watchVideos: Video[] = [
+  {
+    title: "Brooklyn Bites Back with Drea Smith",
+    provider: "vimeo",
+    videoId: "180978314",
+    duration: "6:37",
+    thumbnail: "/images/brooklyn-bites-back-title-card.jpg",
+  },
+  {
+    title: "Andrea Meets a Wolf Hybrid",
+    provider: "vimeo",
+    videoId: "68337365",
+    duration: "3:02",
+    thumbnail: "/images/video-wolf-hybrid.jpg",
+  },
+  {
+    title: "Critter Crusades presents Dog Trainer Andrea Smith",
+    provider: "youtube",
+    videoId: "1SKF7MFDoAs",
+    duration: "27:18",
+    thumbnail: "/images/video-critter-crusades.jpg",
+  },
+  heroVideo,
+]

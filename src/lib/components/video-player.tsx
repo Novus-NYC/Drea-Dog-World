@@ -11,6 +11,13 @@ type VideoPlayerProps = {
   frameClassName?: string
 }
 
+function embedUrl(video: Video) {
+  if (video.provider === "youtube") {
+    return `https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&rel=0`
+  }
+  return `https://player.vimeo.com/video/${video.videoId}?autoplay=1&dnt=1`
+}
+
 export default function VideoPlayer({ video, preload = false, sticker, frameClassName = "" }: VideoPlayerProps) {
   const [playing, setPlaying] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement>(null)
@@ -27,7 +34,7 @@ export default function VideoPlayer({ video, preload = false, sticker, frameClas
       {playing ? (
         <iframe
           ref={iframeRef}
-          src={`https://player.vimeo.com/video/${video.vimeoId}?autoplay=1&dnt=1`}
+          src={embedUrl(video)}
           title={video.title}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
