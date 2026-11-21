@@ -87,3 +87,10 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 -.25'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
+
+@layer components {
+  /* Ripped-paper top and bottom edges for a section band. */
+  .torn-edges {
+    clip-path: polygon(0 24px, 6% 6px, 14% 22px, 25% 4px, 38% 20px, 52% 5px, 66% 21px, 79% 4px, 90% 20px, 100% 6px, 100% calc(100% - 18px), 92% 100%, 80% calc(100% - 14px), 64% 100%, 48% calc(100% - 18px), 30% 100%, 14% calc(100% - 12px), 0 100%);
+  }
+}
