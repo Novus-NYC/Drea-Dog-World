@@ -89,9 +89,9 @@ export const blogUrl = "https://dreadogworld.wordpress.com/"
 
 export const routes = {
   home: "/",
-  about: "/pages/about",
-  testimonials: "/pages/testimonials",
-  contact: "/pages/contact",
+  about: "/about",
+  testimonials: "/testimonials",
+  contact: "/contact",
 }
 
 export const primaryCta: NavLink = {
