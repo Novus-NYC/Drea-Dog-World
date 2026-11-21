@@ -209,8 +209,8 @@ export type Video = {
 }
 
 export const heroVideo: Video = {
-  title: "Brooklyn Bites Back with Drea Smith",
-  vimeoId: "180978314",
-  duration: "6:37",
-  thumbnail: "/images/brooklyn-bites-back-title-card.jpg",
+  title: "Bad Dog/Good Dog",
+  vimeoId: "82690809",
+  duration: "4:19",
+  thumbnail: "/images/drea-apartment.jpg",
 }

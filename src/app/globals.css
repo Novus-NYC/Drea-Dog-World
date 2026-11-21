@@ -29,7 +29,6 @@
 
 @layer base {
   html {
-    /* Keeps anchored headings from hiding under the sticky header */
     scroll-padding-top: calc(var(--header-height) + 20px);
     scroll-behavior: smooth;
   }
@@ -74,23 +73,6 @@
 }
 
 @layer components {
-  .grain {
-    position: relative;
-  }
-
-  .grain::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    mix-blend-mode: multiply;
-    opacity: 0.4;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 -.25'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-}
-
-@layer components {
-  /* Italic serif accent word inside a heading, like "Andrea." */
   .accent {
     font-family: var(--font-fraunces), Georgia, serif;
     font-style: italic;
@@ -98,21 +80,48 @@
     color: var(--color-red);
   }
 
-  /* Photo or video frame: thin outline plus a second outline offset behind it.
-     Change --frame-x, --frame-y and --frame-color per frame to vary the offset. */
+  .hero-wash {
+    background: color-mix(in srgb, var(--color-paper) 86%, transparent);
+  }
+
+  @media (min-width: 1024px) {
+    .hero-wash {
+      background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--color-paper) 88%, transparent) 0%,
+        color-mix(in srgb, var(--color-paper) 62%, transparent) 45%,
+        color-mix(in srgb, var(--color-paper) 10%, transparent) 100%
+      );
+    }
+  }
+
   .frame {
     position: relative;
-    overflow: hidden;
-    border: 2px solid var(--color-ink);
-    border-radius: 1rem;
-    box-shadow:
-      var(--frame-x, 10px) var(--frame-y, 10px) 0 -2px var(--frame-bg, var(--color-paper)),
-      var(--frame-x, 10px) var(--frame-y, 10px) 0 0 var(--frame-color, var(--color-ink));
+    isolation: isolate;
+    border-radius: 8px;
+    outline: 1.5px solid var(--color-ink);
+  }
+
+  .frame > img,
+  .frame > iframe,
+  .frame > button {
+    border-radius: inherit;
+  }
+
+  .frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 1.5px solid var(--color-ink);
+    border-radius: inherit;
+    background: var(--color-band);
+    pointer-events: none;
+    transform: translate(var(--frame-x, 10px), var(--frame-y, 10px));
   }
 }
 
 @layer components {
-  /* Ripped-paper top and bottom edges for a section band. */
   .torn-edges {
     clip-path: polygon(0 24px, 6% 6px, 14% 22px, 25% 4px, 38% 20px, 52% 5px, 66% 21px, 79% 4px, 90% 20px, 100% 6px, 100% calc(100% - 18px), 92% 100%, 80% calc(100% - 14px), 64% 100%, 48% calc(100% - 18px), 30% 100%, 14% calc(100% - 12px), 0 100%);
   }

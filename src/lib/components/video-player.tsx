@@ -8,9 +8,10 @@ type VideoPlayerProps = {
   video: Video
   preload?: boolean
   sticker?: React.ReactNode
+  frameClassName?: string
 }
 
-export default function VideoPlayer({ video, preload = false, sticker }: VideoPlayerProps) {
+export default function VideoPlayer({ video, preload = false, sticker, frameClassName = "" }: VideoPlayerProps) {
   const [playing, setPlaying] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
@@ -22,6 +23,7 @@ export default function VideoPlayer({ video, preload = false, sticker }: VideoPl
 
   return (
     <div className="relative">
+      <div className={`relative aspect-video w-full bg-ink ${frameClassName}`}>
       {playing ? (
         <iframe
           ref={iframeRef}
@@ -29,14 +31,14 @@ export default function VideoPlayer({ video, preload = false, sticker }: VideoPl
           title={video.title}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
-          className="block aspect-video w-full"
+          className="absolute inset-0 h-full w-full"
         />
       ) : (
         <button
           type="button"
           onClick={() => setPlaying(true)}
           aria-label={`Play video: ${video.title} (${video.duration})`}
-          className="group relative block aspect-video w-full overflow-hidden"
+          className="group absolute inset-0 block overflow-hidden"
         >
           <Image
             src={video.thumbnail}
@@ -46,17 +48,18 @@ export default function VideoPlayer({ video, preload = false, sticker }: VideoPl
             preload={preload}
             className="object-cover"
           />
-          <span className="absolute right-3 top-9 bg-ink px-2 py-0.5 text-small text-white">
+          <span className="absolute right-3 top-3 rounded-md bg-ink px-2 py-0.5 text-small text-white">
             {video.duration}
           </span>
-          <span className="absolute bottom-2.5 left-3 max-w-[calc(100%-7.5rem)] bg-ink px-2.5 py-1 text-left text-small font-semibold text-white">
+          <span className="absolute bottom-2.5 left-3 max-w-[calc(100%-7.5rem)] rounded-md bg-ink px-2.5 py-1 text-left text-small font-semibold text-white">
             {video.title}
           </span>
-          <span className="absolute bottom-[8%] right-[5%] grid h-[68px] w-[68px] place-items-center rounded-full bg-red shadow-hard-sm transition-transform duration-200 group-hover:-rotate-6 group-hover:scale-110 lg:h-[86px] lg:w-[86px]">
+          <span className="absolute bottom-[8%] right-[5%] grid h-[68px] w-[68px] place-items-center rounded-full bg-red shadow-lift transition-transform duration-200 group-hover:-rotate-6 group-hover:scale-110 lg:h-[86px] lg:w-[86px]">
             <span className="ml-1.5 border-y-[15px] border-l-[24px] border-y-transparent border-l-white" />
           </span>
         </button>
       )}
+      </div>
 
       {!playing && sticker}
     </div>
