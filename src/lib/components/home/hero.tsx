@@ -20,7 +20,7 @@ export default function Hero() {
 
           <h1 id="hero-heading" className="text-display">
             Smart love for{" "}
-            <span className="mt-1.5 block font-tag text-[1.06em] normal-case text-red [text-shadow:3px_3px_0_var(--color-ink)]">
+            <span className="accent mt-1.5 block">
               Brooklyn dogs.
             </span>
           </h1>
@@ -56,7 +56,7 @@ export default function Hero() {
               sticker={
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute -bottom-7 -left-2.5 z-10 -rotate-6 border-[3px] border-ink bg-sheet px-3.5 py-2 font-tag text-[26px] leading-none text-red shadow-[5px_5px_0_var(--color-ink)] [text-shadow:2px_2px_0_var(--color-ink)] lg:-left-[26px]"
+                  className="pointer-events-none absolute -bottom-7 -left-2.5 z-10 -rotate-6 border-[3px] border-ink bg-sheet px-3.5 py-2 accent text-[26px] leading-none shadow-[5px_5px_0_var(--color-ink)] lg:-left-[26px]"
                 >
                   Start here!
                 </span>

@@ -50,7 +50,7 @@ export default function AboutPreview() {
           <Eyebrow>About {business.nickname}</Eyebrow>
           <h2 id="about-heading" className="text-[clamp(2.5rem,5.4vw,4.5rem)]">
             Hi. I’m{" "}
-            <span className="font-tag text-[1.1em] normal-case text-red [text-shadow:3px_3px_0_var(--color-ink)]">
+            <span className="accent">
               Andrea.
             </span>
           </h2>
@@ -78,7 +78,7 @@ export default function AboutPreview() {
             ))}
           </ul>
 
-          <p className="mt-6 font-tag text-[2.5rem] leading-none text-red [text-shadow:2px_2px_0_var(--color-ink)]">
+          <p className="accent mt-6 text-[2rem] leading-tight">
             Your best friend’s best friend,
           </p>
           <p className="mt-1 font-semibold">

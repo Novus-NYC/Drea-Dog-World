@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="xMidYMax slice">
-<g fill="#9fa8a5">
+<g fill="#baaba4">
 <rect x="-20" y="91" width="89" height="109"/><rect x="70" y="75" width="71" height="125"/><rect x="143" y="101" width="92" height="99"/><rect x="235" y="95" width="81" height="105"/><rect x="321" y="84" width="62" height="116"/><rect x="388" y="70" width="88" height="130"/><rect x="477" y="115" width="70" height="85"/>
 <rect x="498" y="81" width="28" height="26" rx="3"/><path d="M498 107l-4 8h4zM526 107l4 8h-4z"/><rect x="500" y="107" width="2" height="8"/><rect x="522" y="107" width="2" height="8"/>
 <rect x="548" y="75" width="92" height="125"/><rect x="644" y="81" width="64" height="119"/><rect x="714" y="74" width="107" height="126"/>
@@ -12,8 +12,8 @@
 <rect x="1254" y="88" width="28" height="26" rx="3"/><path d="M1254 114l-4 8h4zM1282 114l4 8h-4z"/><rect x="1256" y="114" width="2" height="8"/><rect x="1278" y="114" width="2" height="8"/>
 <rect x="1317" y="72" width="107" height="128"/><rect x="1428" y="123" width="60" height="77"/>
 </g>
-<g fill="none" stroke="#e8352b" stroke-width="3">
-<circle cx="1230" cy="96" r="78"/><circle cx="1230" cy="96" r="56" stroke-width="2"/><circle cx="1230" cy="96" r="6" fill="#e8352b"/>
+<g fill="none" stroke="#a9533f" stroke-width="3">
+<circle cx="1230" cy="96" r="78"/><circle cx="1230" cy="96" r="56" stroke-width="2"/><circle cx="1230" cy="96" r="6" fill="#a9533f"/>
 <g stroke-width="1.6">
 <line x1="1230" y1="18" x2="1230" y2="174"/>
 <line x1="1230" y1="18" x2="1230" y2="174" transform="rotate(22 1230 96)"/>
@@ -26,8 +26,8 @@
 <line x1="1230" y1="18" x2="1230" y2="174" transform="rotate(176 1230 96)"/>
 </g>
 </g>
-<path d="M1178 200L1230 96L1282 200" fill="none" stroke="#0b0b0b" stroke-width="5"/>
-<g fill="#0b0b0b">
+<path d="M1178 200L1230 96L1282 200" fill="none" stroke="#2b2321" stroke-width="5"/>
+<g fill="#2b2321">
 <rect x="-10" y="75" width="104" height="125"/><rect x="-14" y="67" width="112" height="10"/><rect x="-6" y="63" width="96" height="5"/><path d="M17 200V188h-8V200zM23 200V194h38V200z"/>
 <rect x="96" y="85" width="101" height="115"/><rect x="92" y="77" width="109" height="10"/><rect x="100" y="73" width="93" height="5"/><path d="M121 200V188h-8V200zM127 200V194h38V200z"/>
 <rect x="199" y="51" width="99" height="149"/><rect x="195" y="43" width="107" height="10"/><rect x="203" y="39" width="91" height="5"/><path d="M223 200V188h-8V200zM229 200V194h38V200z"/>
@@ -44,7 +44,7 @@
 <rect x="1414" y="57" width="94" height="143"/><rect x="1410" y="49" width="102" height="10"/><rect x="1418" y="45" width="86" height="5"/><path d="M1436 200V188h-8V200zM1442 200V194h38V200z"/>
 <rect x="0" y="196" width="1440" height="4"/>
 </g>
-<g fill="#2d3331">
+<g fill="#4a2f27">
 <rect x="35" y="89" width="14" height="20"/><rect x="6" y="123" width="14" height="20"/><rect x="35" y="123" width="14" height="20"/><rect x="64" y="123" width="14" height="20"/><rect x="6" y="157" width="14" height="20"/><rect x="64" y="157" width="14" height="20"/><rect x="33" y="156" width="18" height="30"/>
 <rect x="111" y="99" width="14" height="20"/><rect x="140" y="99" width="14" height="20"/><rect x="111" y="133" width="14" height="20"/><rect x="140" y="133" width="14" height="20"/><rect x="168" y="133" width="14" height="20"/><rect x="111" y="167" width="14" height="20"/><rect x="168" y="167" width="14" height="20"/><rect x="137" y="156" width="18" height="30"/>
 <rect x="223" y="65" width="14" height="20"/><rect x="260" y="65" width="14" height="20"/><rect x="260" y="99" width="14" height="20"/><rect x="223" y="133" width="14" height="20"/><rect x="239" y="156" width="18" height="30"/>
