@@ -30,6 +30,12 @@ export type PressMention = {
   url?: string
 }
 
+export type Testimonial = {
+  name: string
+  role: string
+  quote: string
+}
+
 // ---------- Business identity ----------
 
 export const business = {
@@ -201,6 +207,48 @@ export const press: PressMention[] = [
     logo: "time",
     headline: "A Brooklyn dog spa’s socialization space, designed with Andrea’s input",
     note: "Mention",
+  },
+]
+
+// ---------- Testimonials ----------
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Liz Maccie",
+    role: "Tess and Emma’s mom",
+    quote: "She has single-handedly changed my life and the lives of my dogs in less than one month!",
+  },
+  {
+    name: "Erin Fox",
+    role: "Two rescues",
+    quote:
+      "Within a few sessions with Andrea, she was back at the park playing, greeting other dogs and avoiding trouble rather than running toward it.",
+  },
+  {
+    name: "Stephanie Benson, M.A.",
+    role: "Pete’s mom",
+    quote: "Andrea is one of the most talented and passionate professionals I have had the pleasure of working with.",
+  },
+  {
+    name: "Jobanny Estrella-Elmonis",
+    role: "Pit bull family",
+    quote: "She has this super calm aura that has helped so much with the dogs we have adopted.",
+  },
+  {
+    name: "Nicholas Phillips",
+    role: "Busy’s dad",
+    quote:
+      "The barking problem which persisted before we contacted her has been significantly reduced through her patience and attention to our dog.",
+  },
+  {
+    name: "Rebecca Gillaspie",
+    role: "Dog owner",
+    quote: "She taught me some simple strategies on how to deal with my dog greeting guests. It was simple and it worked.",
+  },
+  {
+    name: "Molly Wootton",
+    role: "Molly’s Mutts & Meows",
+    quote: "She is outstanding, reliable and very good at her job.",
   },
 ]
 

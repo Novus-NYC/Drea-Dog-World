@@ -183,3 +183,48 @@
     transform: rotate(-8deg);
   }
 }
+
+@layer components {
+  .review-row {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+
+  .review-track {
+    display: flex;
+    width: max-content;
+    animation: review-slide 70s linear infinite;
+  }
+
+  .review-row-reverse .review-track {
+    animation-direction: reverse;
+  }
+
+  .review-rows.is-paused .review-track {
+    animation-play-state: paused;
+  }
+
+  @media (hover: hover) {
+    .review-rows:hover .review-track {
+      animation-play-state: paused;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .review-row {
+      mask-image: none;
+    }
+
+    .review-track {
+      display: block;
+      width: auto;
+      animation: none;
+    }
+  }
+}
+
+@keyframes review-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}

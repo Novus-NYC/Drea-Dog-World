@@ -25,7 +25,7 @@ export default function PawTrail() {
   }, [])
 
   return (
-    <div ref={trailRef} aria-hidden="true" className="flex justify-center gap-[30px] bg-paper py-[22px]">
+    <div ref={trailRef} aria-hidden="true" className="flex justify-center gap-[30px] pt-24">
       {steps.map((step) => (
         <span
           key={step}

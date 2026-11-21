@@ -2,7 +2,7 @@ import AboutPreview from "@/lib/components/home/about-preview"
 import CommonIssues from "@/lib/components/home/common-issues"
 import Hero from "@/lib/components/home/hero"
 import PressClippings from "@/lib/components/home/press-clippings"
-import PawTrail from "@/lib/components/paw-trail"
+import Reviews from "@/lib/components/home/reviews"
 import WatchVideos from "@/lib/components/home/watch-videos"
 
 export default function HomePage() {
@@ -13,7 +13,7 @@ export default function HomePage() {
       <CommonIssues />
       <WatchVideos />
       <PressClippings />
-      <PawTrail />
+      <Reviews />
     </>
   )
 }

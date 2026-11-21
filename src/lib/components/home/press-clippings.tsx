@@ -1,6 +1,7 @@
 import Image from "next/image"
 import ButtonLink from "@/lib/components/button-link"
 import Eyebrow from "@/lib/components/eyebrow"
+import PawTrail from "@/lib/components/paw-trail"
 import { press, routes, type PressMention } from "@/lib/site-data"
 
 const credentialStrip = [
@@ -82,7 +83,7 @@ export default function PressClippings() {
     <section
       id="press"
       aria-labelledby="press-heading"
-      className="torn-edges relative -mt-[22px] bg-band pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
+      className="torn-edges relative -mt-[22px] bg-band pb-10 pt-28 lg:pb-12 lg:pt-[120px]"
     >
       <div className="mx-auto max-w-content px-gutter">
         <Eyebrow>Press and credentials</Eyebrow>
@@ -133,6 +134,8 @@ export default function PressClippings() {
         <ButtonLink href={`${routes.about}#press`} className="mt-10">
           See all press and credentials
         </ButtonLink>
+
+        <PawTrail />
       </div>
     </section>
   )
