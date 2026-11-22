@@ -202,7 +202,7 @@ export const storyTimeline: { when: string; title: string; text: string }[] = [
   {
     when: "Today",
     title: "30+ years in",
-    text: "Still training Brooklyn dogs and their people, and the primary consultant for Molly’s Mutts & Meows.",
+    text: "Still training Brooklyn dogs and their people, one block at a time.",
   },
 ]
 

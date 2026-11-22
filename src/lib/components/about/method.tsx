@@ -1,16 +1,10 @@
-import PawIcon from "@/lib/components/icons/paw-icon"
 import ButtonLink from "@/lib/components/ui/button-link"
-import Eyebrow from "@/lib/components/ui/eyebrow"
 import { fourPs, helpsWith, primaryCta, trainingMethods } from "@/lib/site-data"
 
 export default function Method() {
   return (
-    <section
-      aria-labelledby="method-heading"
-      className="torn-edges relative -mt-[22px] bg-band pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
-    >
+    <section aria-labelledby="method-heading" className="bg-band py-24 lg:py-[110px]">
       <div className="mx-auto max-w-content px-gutter">
-        <Eyebrow>The method</Eyebrow>
         <h2 id="method-heading" className="text-heading">
           The four <span className="accent">P’s.</span>
         </h2>
@@ -29,7 +23,7 @@ export default function Method() {
           ))}
         </ol>
 
-        <div className="mt-10 grid gap-12 rounded-frame bg-sheet px-6 py-9 sm:px-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-9 lg:px-12 lg:py-11">
+        <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <h3 className="border-b-2 border-ink pb-3 text-2xl">How she trains</h3>
             <ol className="mt-5 grid gap-3">
@@ -47,36 +41,30 @@ export default function Method() {
 
           <div>
             <h3 className="border-b-2 border-ink pb-3 text-2xl">What she helps with</h3>
-            <dl className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+            <dl className="mt-5 grid gap-x-8 gap-y-6 sm:grid-cols-2">
               {helpsWith.map((group) => (
                 <div key={group.place}>
-                  <dt className="flex items-center gap-2 font-semibold text-blue">
-                    <PawIcon className="w-4 shrink-0 text-red" />
-                    {group.place}
-                  </dt>
-                  <dd className="mt-2 flex flex-wrap gap-2">
-                    {group.problems.map((problem) => (
-                      <span
-                        key={problem}
-                        className="rounded-md border border-line bg-paper px-3 py-1.5 text-small font-semibold"
-                      >
-                        {problem}
-                      </span>
-                    ))}
+                  <dt className="font-semibold text-blue">{group.place}</dt>
+                  <dd>
+                    <ul className="mt-1.5 grid gap-1">
+                      {group.problems.map((problem) => (
+                        <li key={problem}>{problem}</li>
+                      ))}
+                    </ul>
                   </dd>
                 </div>
               ))}
             </dl>
           </div>
+        </div>
 
-          <div className="-mt-5 flex flex-col items-start gap-4 border-t border-dashed border-line pt-7 sm:flex-row sm:items-center sm:justify-between lg:col-span-2 lg:mt-0">
-            <p className="font-display text-xl font-semibold">
-              Not sure where your dog fits? <span className="accent">Tell Drea what’s going on.</span>
-            </p>
-            <ButtonLink href={primaryCta.href} className="shrink-0">
-              Ask about your dog
-            </ButtonLink>
-          </div>
+        <div className="mt-12 flex flex-col items-start gap-4 border-t border-dashed border-[color-mix(in_srgb,var(--color-ink)_25%,transparent)] pt-7 sm:flex-row sm:items-center sm:justify-between">
+          <p className="font-display text-xl font-semibold">
+            Not sure where your dog fits? <span className="accent">Tell Drea what’s going on.</span>
+          </p>
+          <ButtonLink href={primaryCta.href} className="shrink-0">
+            Ask about your dog
+          </ButtonLink>
         </div>
       </div>
     </section>

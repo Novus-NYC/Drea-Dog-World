@@ -4,12 +4,6 @@ import Eyebrow from "@/lib/components/ui/eyebrow"
 import Skyline from "@/lib/components/ui/skyline"
 import { business, primaryCta } from "@/lib/site-data"
 
-const facts = [
-  { value: `${business.yearsExperience}`, label: "years with dogs and their people" },
-  { value: `${business.foundedYear}`, label: `founded ${business.name}` },
-  { value: "BK", label: "training dogs across Brooklyn" },
-]
-
 // Each window floats at its own spot, size, and tilt around the doorway, without touching it.
 const windows = [
   {
@@ -52,8 +46,13 @@ export default function AboutHero() {
         className="object-cover object-[center_35%]"
       />
       <div aria-hidden="true" className="hero-wash absolute inset-0" />
+      {/* Extra wash behind the photo scene so the background Andrea doesn’t compete with the windows */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 hidden bg-[linear-gradient(90deg,transparent_25%,color-mix(in_srgb,var(--color-paper)_78%,transparent)_48%,color-mix(in_srgb,var(--color-paper)_60%,transparent)_100%)] lg:block"
+      />
 
-      <div className="relative z-[2] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[150px] pt-14 lg:grid-cols-[0.8fr_1.2fr] lg:pb-[210px] lg:pt-20">
+      <div className="relative z-[2] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[150px] pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:pb-[max(210px,calc(14vw_+_30px))] lg:pt-20">
         <div>
           <Eyebrow>About {business.nickname}</Eyebrow>
           <h1 id="about-hero-heading" className="text-display">
@@ -69,18 +68,9 @@ export default function AboutHero() {
               Press and credentials
             </ButtonLink>
           </div>
-
-          <dl className="mt-10 grid grid-cols-3 gap-4 rounded-frame bg-[color-mix(in_srgb,var(--color-sheet)_88%,transparent)] px-4 py-3.5 sm:px-5">
-            {facts.map((fact) => (
-              <div key={fact.label}>
-                <dt className="font-display text-[1.75rem] font-semibold leading-none text-red-deep">{fact.value}</dt>
-                <dd className="mt-1.5 text-small leading-snug">{fact.label}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
-        <div className="relative mx-auto aspect-[27/20] w-full max-w-[700px]">
+        <div className="relative mx-auto aspect-[27/20] w-full max-w-[560px]">
           <div className="about-enter relative z-[1] mx-auto w-[41%] pt-[3%]">
             <figure className="rounded-t-[999px] rounded-b-[8px] bg-deep p-[4.5%] shadow-lift">
               <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b border-[3px] border-blush">

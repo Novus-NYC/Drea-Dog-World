@@ -5,7 +5,7 @@ export default function HerStory() {
   return (
     <section
       aria-labelledby="her-story-heading"
-      className="torn-edges relative -mt-[22px] bg-sheet pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
+      className="torn-top relative -mt-[22px] bg-sheet pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
     >
       <div className="mx-auto grid max-w-content items-start gap-14 px-gutter lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
         <div>

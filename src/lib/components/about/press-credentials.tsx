@@ -1,13 +1,12 @@
 import OutletLogo from "@/lib/components/icons/outlet-logo"
 import CredentialBadge from "@/lib/components/ui/credential-badge"
-import Eyebrow from "@/lib/components/ui/eyebrow"
 import { credentials, press, type PressMention } from "@/lib/site-data"
 
 function OutletColumn({ item }: { item: PressMention }) {
   const content = (
     <>
       <OutletLogo item={item} size={26} />
-      <span className="font-display text-xl font-semibold leading-tight">{item.outlet}</span>
+      <span className="font-display text-lg font-semibold leading-tight">{item.outlet}</span>
       <span className="text-small text-steel">
         {item.note}
         {item.url && <span aria-hidden="true"> ↗</span>}
@@ -15,11 +14,11 @@ function OutletColumn({ item }: { item: PressMention }) {
     </>
   )
 
-  const columnClass = "grid h-full content-center justify-items-center gap-2 bg-paper px-4 py-8 text-center"
+  const columnClass = "grid h-full content-center justify-items-center gap-2 bg-sheet px-4 py-8 text-center"
 
   if (item.url) {
     return (
-      <a href={item.url} target="_blank" rel="noreferrer" className={`${columnClass} no-underline transition-colors hover:bg-sheet`}>
+      <a href={item.url} target="_blank" rel="noreferrer" className={`${columnClass} no-underline transition-colors hover:bg-paper`}>
         {content}
         <span className="sr-only">(opens in a new tab)</span>
       </a>
@@ -31,9 +30,8 @@ function OutletColumn({ item }: { item: PressMention }) {
 
 export default function PressCredentials() {
   return (
-    <section id="press" aria-labelledby="press-heading" className="py-24 lg:py-[110px]">
+    <section id="press" aria-labelledby="press-heading" className="-mt-[22px] bg-sheet pb-24 pt-28 lg:pb-[110px] lg:pt-[132px]">
       <div className="mx-auto max-w-content px-gutter">
-        <Eyebrow>Press and credentials</Eyebrow>
         <h2 id="press-heading" className="text-heading">
           As seen <span className="accent">in.</span>
         </h2>
