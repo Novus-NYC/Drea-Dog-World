@@ -1,10 +1,10 @@
 import Eyebrow from "@/lib/components/ui/eyebrow"
-import WatchPlaylist from "@/lib/components/home/watch-playlist"
+import WatchPlaylist from "@/lib/components/about/watch-playlist"
 import { watchVideos } from "@/lib/site-data"
 
 export default function WatchVideos() {
   return (
-    <section id="watch" aria-labelledby="watch-heading" className="torn-edges relative -mt-[22px] bg-blue pb-24 pt-28 text-sheet lg:pb-[110px] lg:pt-[120px]">
+    <section id="watch" aria-labelledby="watch-heading" className="bg-ink py-24 text-sheet lg:py-[110px]">
       <div className="mx-auto max-w-content px-gutter">
         <Eyebrow onDark>Watch</Eyebrow>
         <h2 id="watch-heading" className="text-heading">
