@@ -2,27 +2,33 @@ import ButtonLink from "@/lib/components/ui/button-link"
 import Eyebrow from "@/lib/components/ui/eyebrow"
 import { business, contact, routes } from "@/lib/site-data"
 
+type ContactCtaProps = {
+  eyebrow: string
+  title: string
+  accent: string
+  text: string
+}
+
 const contactWays = [
   { label: "Call or text", value: contact.phone.display, href: contact.phone.href },
   { label: "Email", value: contact.email.display, href: contact.email.href },
   { label: "Instagram", value: contact.instagram.display, href: contact.instagram.href, external: true },
 ]
 
-export default function MeetCta() {
+// The closing "get in touch" section at the end of a page.
+export default function ContactCta({ eyebrow, title, accent, text }: ContactCtaProps) {
   return (
     <section
-      aria-labelledby="meet-heading"
-      className="torn-top relative -mt-[22px] bg-paper pb-20 pt-28 lg:pb-28 lg:pt-[120px]"
+      aria-labelledby="contact-cta-heading"
+      className="torn-top relative -mt-[22px] bg-paper pb-10 pt-28 lg:pb-14 lg:pt-[120px]"
     >
       <div className="mx-auto grid max-w-content items-center gap-12 px-gutter lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
         <div>
-          <Eyebrow>Ready when you are</Eyebrow>
-          <h2 id="meet-heading" className="text-display">
-            Ready to <span className="accent">meet her?</span>
+          <Eyebrow>{eyebrow}</Eyebrow>
+          <h2 id="contact-cta-heading" className="text-display">
+            {title} <span className="accent">{accent}</span>
           </h2>
-          <p className="mb-8 mt-4 max-w-[30em] text-lead">
-            Tell {business.nickname} about your dog. She’ll write back with where she would start.
-          </p>
+          <p className="mb-8 mt-4 max-w-[30em] text-lead">{text}</p>
           <ButtonLink href={routes.contact}>
             Send {business.nickname} a postcard <span aria-hidden="true">→</span>
           </ButtonLink>
