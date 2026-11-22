@@ -34,6 +34,14 @@ export default function Navbar() {
     setMenuOpen(false)
   }
 
+  // Clicking a link to the page you are already on scrolls back to the top.
+  function handleNavClick(href: string) {
+    closeMenu()
+    if (href === pathname) {
+      window.scrollTo({ top: 0 })
+    }
+  }
+
   function handleKeyDown(event: React.KeyboardEvent) {
     if (event.key === "Escape" && menuOpen) {
       closeMenu()
@@ -50,7 +58,7 @@ export default function Navbar() {
         <Link
           href={routes.home}
           className="flex items-center gap-3 whitespace-nowrap font-display text-xl font-semibold no-underline sm:text-2xl"
-          onClick={closeMenu}
+          onClick={() => handleNavClick(routes.home)}
         >
           <BadgeLogo className="h-11 w-11 shrink-0" />
           {business.name}
@@ -89,7 +97,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 aria-current={pathname === link.href ? "page" : undefined}
-                onClick={closeMenu}
+                onClick={() => handleNavClick(link.href)}
                 className="py-3 text-small font-semibold no-underline decoration-red decoration-[3px] underline-offset-8 hover:underline aria-[current=page]:underline lg:py-1"
               >
                 {link.label}
@@ -99,7 +107,7 @@ export default function Navbar() {
 
           <Link
             href={primaryCta.href}
-            onClick={closeMenu}
+            onClick={() => handleNavClick(primaryCta.href)}
             className="mt-3 rounded-full bg-red px-5 py-2.5 text-center text-small font-semibold no-underline transition-colors hover:bg-red-deep lg:mt-0"
           >
             {primaryCta.label}
