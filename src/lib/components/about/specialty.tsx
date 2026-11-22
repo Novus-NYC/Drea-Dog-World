@@ -1,7 +1,4 @@
 import Image from "next/image"
-import { specialties } from "@/lib/site-data"
-
-const featured = specialties.filter((item) => ["Bully breeds", "Rescues", "Reactive dogs"].includes(item))
 
 const halftone = "bg-[radial-gradient(currentColor_2.8px,transparent_3.2px)] bg-[length:15px_15px]"
 
@@ -21,17 +18,6 @@ export default function Specialty() {
             misunderstood the most. Patient, positive, structured work changes how the dog and the neighborhood see each
             other.
           </p>
-
-          <ul aria-label="Andrea’s specialties" className="mt-7 flex flex-wrap gap-2.5">
-            {featured.map((specialty) => (
-              <li
-                key={specialty}
-                className="rounded-md border-[1.5px] border-[color-mix(in_srgb,var(--color-sheet)_50%,transparent)] px-3.5 py-1.5 text-small font-semibold"
-              >
-                {specialty}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <figure className="relative mx-auto w-[min(380px,calc(100%-40px))]">

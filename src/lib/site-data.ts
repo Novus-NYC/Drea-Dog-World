@@ -258,7 +258,7 @@ export const press: PressMention[] = [
     outlet: "Time Magazine",
     logo: "time",
     headline: "A Brooklyn dog spa’s socialization space, designed with Andrea’s input",
-    note: "Mention",
+    note: "Play space design",
   },
   {
     outlet: "Critter Crusades",

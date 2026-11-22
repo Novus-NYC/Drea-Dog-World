@@ -49,7 +49,7 @@ export default function AboutHero() {
       {/* Extra wash behind the photo scene so the background Andrea doesn’t compete with the windows */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 hidden bg-[linear-gradient(90deg,transparent_25%,color-mix(in_srgb,var(--color-paper)_78%,transparent)_48%,color-mix(in_srgb,var(--color-paper)_60%,transparent)_100%)] lg:block"
+        className="absolute inset-0 hidden bg-[linear-gradient(90deg,transparent_25%,color-mix(in_srgb,var(--color-paper)_88%,transparent)_45%,color-mix(in_srgb,var(--color-paper)_80%,transparent)_100%)] lg:block"
       />
 
       <div className="relative z-[2] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[150px] pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:pb-[max(210px,calc(14vw_+_30px))] lg:pt-20">
