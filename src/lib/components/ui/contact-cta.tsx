@@ -30,7 +30,7 @@ export default function ContactCta({ eyebrow, title, accent, text }: ContactCtaP
           </h2>
           <p className="mb-8 mt-4 max-w-[30em] text-lead">{text}</p>
           <ButtonLink href={routes.contact}>
-            Send {business.nickname} a postcard <span aria-hidden="true">→</span>
+            Tell {business.nickname} about your dog <span aria-hidden="true">→</span>
           </ButtonLink>
         </div>
 
