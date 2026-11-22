@@ -14,7 +14,7 @@ export default function Socials() {
     <section
       id="socials"
       aria-labelledby="socials-heading"
-      className="torn-edges relative -mt-[22px] bg-sheet pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
+      className="torn-edges relative -mt-[22px] bg-sage pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
     >
       <div className="mx-auto max-w-content px-gutter">
         <div className="flex flex-wrap items-end justify-between gap-6">
@@ -80,7 +80,7 @@ export default function Socials() {
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-3 border-t border-line pt-5">
+        <div className="mt-8 flex flex-wrap items-baseline gap-x-6 gap-y-3 border-t border-[color-mix(in_srgb,var(--color-ink)_25%,transparent)] pt-5">
           <p className="text-eyebrow font-semibold uppercase text-blue">From the blog archive</p>
           <ul className="flex flex-wrap gap-x-7 gap-y-2">
             {blogPosts.map((post) => (

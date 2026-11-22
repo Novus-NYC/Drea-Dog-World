@@ -12,6 +12,7 @@ const config: Config = {
         },
         blue: "var(--color-blue)",
         deep: "var(--color-deep)",
+        sage: "var(--color-sage)",
         paper: "var(--color-paper)",
         sheet: "var(--color-sheet)",
         band: "var(--color-band)",

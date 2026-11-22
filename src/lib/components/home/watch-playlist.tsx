@@ -34,11 +34,11 @@ export default function WatchPlaylist({ videos }: WatchPlaylistProps) {
       </div>
 
       <div>
-        <Eyebrow>Now playing</Eyebrow>
+        <Eyebrow onDark>Now playing</Eyebrow>
         <h3 aria-live="polite" className="text-title">
           {video.title}
         </h3>
-        <p className="mt-1 text-small text-steel">{video.duration}</p>
+        <p className="mt-1 text-small text-blush">{video.duration}</p>
 
         <ul aria-label="Choose a channel" className="mt-6 grid gap-2.5">
           {videos.map((item, index) => {
@@ -50,7 +50,7 @@ export default function WatchPlaylist({ videos }: WatchPlaylistProps) {
                   type="button"
                   aria-pressed={selected}
                   onClick={() => setCurrent(index)}
-                  className={`flex w-full items-center gap-3.5 rounded-xl border-2 bg-sheet px-3.5 py-2.5 text-left font-semibold leading-snug transition-colors ${
+                  className={`flex w-full items-center gap-3.5 rounded-xl border-2 bg-sheet px-3.5 py-2.5 text-left text-ink font-semibold leading-snug transition-colors ${
                     selected ? "border-red" : "border-line hover:border-steel"
                   }`}
                 >
