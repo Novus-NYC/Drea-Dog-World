@@ -9,7 +9,7 @@ export default function CommonIssues() {
     <section
       id="issues"
       aria-labelledby="issues-heading"
-      className="torn-edges relative -mt-[22px] bg-band pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
+      className="relative bg-band pb-24 pt-24 lg:pb-[110px] lg:pt-[110px]"
     >
       <div className="mx-auto max-w-content px-gutter">
         <Eyebrow>Common issues</Eyebrow>
