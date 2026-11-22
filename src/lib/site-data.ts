@@ -30,6 +30,8 @@ export type PressMention = {
   headline: string
   note: string
   url?: string
+  // Set to false to list it on the About page only.
+  showOnHomepage?: boolean
 }
 
 export type Testimonial = {
@@ -254,6 +256,14 @@ export const press: PressMention[] = [
     logo: "time",
     headline: "A Brooklyn dog spa’s socialization space, designed with Andrea’s input",
     note: "Mention",
+  },
+  {
+    outlet: "Critter Crusades",
+    logo: "critter",
+    headline: "Her work with canine rescue teams at the World Trade Center",
+    note: "TV interview",
+    url: "https://www.youtube.com/watch?v=1SKF7MFDoAs",
+    showOnHomepage: false,
   },
 ]
 
