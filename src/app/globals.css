@@ -151,6 +151,11 @@
     clip-path: polygon(0 24px, 6% 6px, 14% 22px, 25% 4px, 38% 20px, 52% 5px, 66% 21px, 79% 4px, 90% 20px, 100% 6px, 100% calc(100% - 18px), 92% 100%, 80% calc(100% - 14px), 64% 100%, 48% calc(100% - 18px), 30% 100%, 14% calc(100% - 12px), 0 100%);
   }
 
+  /* The same tear on the top edge only */
+  .torn-top {
+    clip-path: polygon(0 24px, 6% 6px, 14% 22px, 25% 4px, 38% 20px, 52% 5px, 66% 21px, 79% 4px, 90% 20px, 100% 6px, 100% 100%, 0 100%);
+  }
+
   /* ---------- About hero: doorway and floating windows ---------- */
 
   .about-enter {
