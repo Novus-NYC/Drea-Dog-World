@@ -81,7 +81,7 @@ export default function AboutHero() {
         </div>
 
         <div className="relative mx-auto aspect-[27/20] w-full max-w-[700px]">
-          <div className="relative z-[1] mx-auto w-[41%] pt-[3%]">
+          <div className="about-enter relative z-[1] mx-auto w-[41%] pt-[3%]">
             <figure className="rounded-t-[999px] rounded-b-[8px] bg-deep p-[4.5%] shadow-lift">
               <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b border-[3px] border-blush">
                 <Image
@@ -103,14 +103,19 @@ export default function AboutHero() {
           </div>
 
           <ul aria-label="Moments from Andrea’s life with dogs">
-            {windows.map((window) => (
+            {windows.map((window, index) => (
               <li key={window.src} className={`absolute ${window.place}`}>
-                <figure className={`relative rounded-t-[999px] rounded-b p-[5%] ${trim}`}>
-                  <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-sm">
-                    <Image src={window.src} alt={window.alt} fill sizes="(min-width: 1024px) 150px, 21vw" className={`object-cover ${window.focus}`} />
-                  </span>
-                  <span aria-hidden="true" className={`absolute -inset-x-[6%] -bottom-1 h-[5%] min-h-1.5 rounded-sm ${trim}`} />
-                </figure>
+                <div className="about-enter" style={{ animationDelay: `${350 + index * 130}ms` }}>
+                  <figure
+                    className={`window-float relative rounded-t-[999px] rounded-b p-[5%] ${trim}`}
+                    style={{ animationDuration: `${6 + index * 0.7}s`, animationDelay: `${-index * 1.6}s` }}
+                  >
+                    <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-sm">
+                      <Image src={window.src} alt={window.alt} fill sizes="(min-width: 1024px) 150px, 21vw" className={`object-cover ${window.focus}`} />
+                    </span>
+                    <span aria-hidden="true" className={`absolute -inset-x-[6%] -bottom-1 h-[5%] min-h-1.5 rounded-sm ${trim}`} />
+                  </figure>
+                </div>
               </li>
             ))}
           </ul>
