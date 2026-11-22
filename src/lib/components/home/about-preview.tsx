@@ -18,7 +18,7 @@ export default function AboutPreview() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="torn-edges relative -mt-[22px] bg-sheet py-20 lg:py-[90px]"
+      className="bg-sheet py-20 lg:py-[90px]"
     >
       <div className="mx-auto grid max-w-content items-center gap-14 px-gutter lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative mb-28 mr-[8%] lg:mb-[130px] lg:mt-12">

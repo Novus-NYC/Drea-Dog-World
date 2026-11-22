@@ -1,17 +1,9 @@
 import Image from "next/image"
 import ButtonLink from "@/lib/components/ui/button-link"
 import Eyebrow from "@/lib/components/ui/eyebrow"
-import PawIcon from "@/lib/components/icons/paw-icon"
 import Skyline from "@/lib/components/ui/skyline"
 import VideoPlayer from "@/lib/components/ui/video-player"
 import { business, heroVideo, primaryCta, routes } from "@/lib/site-data"
-
-const quickFacts = [
-  "30+ years serving Brooklyn’s pups",
-  "In The New York Times",
-  "Never a shock collar",
-  "Rescue and reactive dogs",
-]
 
 const tapeClass = "absolute -top-3 z-10 h-[26px] w-[92px] bg-[rgba(255,250,245,0.85)] shadow-[0_1px_3px_rgba(0,0,0,0.2)]"
 
@@ -70,18 +62,6 @@ export default function Hero() {
               }
             />
           </div>
-
-          <ul
-            aria-label="Quick facts"
-            className="mt-12 flex flex-wrap gap-x-6 gap-y-2 rounded-frame bg-[color-mix(in_srgb,var(--color-sheet)_88%,transparent)] px-4 py-3 text-small font-semibold"
-          >
-            {quickFacts.map((fact) => (
-              <li key={fact} className="flex items-center gap-2 whitespace-nowrap">
-                <PawIcon className="w-4 shrink-0 text-red" />
-                {fact}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
