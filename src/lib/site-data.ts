@@ -181,12 +181,32 @@ export const dogAges: string[] = ["Adult dog (1+ years old)", "Puppy (less than 
 
 // ---------- Background, credentials, and press ----------
 
-export const background: string[] = [
-  "Studied psychology at Mount Vernon College.",
-  "Volunteered with canine rescue after 9/11.",
-  "More than 30 years of working with dogs and their people.",
-  "Started her business in 2002.",
-  "Primary consultant for Molly’s Mutts & Meows.",
+export const storyTimeline: { when: string; title: string; text: string }[] = [
+  {
+    when: "Then",
+    title: "Psychology studies",
+    text: "Studied psychology at Mount Vernon College in Washington, D.C. Before training dogs, she also worked as a runway model.",
+  },
+  {
+    when: "2001",
+    title: "Finding her calling",
+    text: "Volunteered with canine rescue teams after 9/11 at the World Trade Center.",
+  },
+  {
+    when: "2002",
+    title: "Drea’s Dog World",
+    text: "Founded her own training business in Brooklyn.",
+  },
+  {
+    when: "Since",
+    title: "Rescue on screen",
+    text: "Producer and host of dog rescue TV projects, including Brooklyn Bites Back with Drea Smith.",
+  },
+  {
+    when: "Today",
+    title: "30+ years in",
+    text: "Still training Brooklyn dogs and their people, and the primary consultant for Molly’s Mutts & Meows.",
+  },
 ]
 
 export const credentials: Credential[] = [
