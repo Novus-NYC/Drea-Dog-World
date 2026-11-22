@@ -28,7 +28,7 @@ export default function Hero() {
       />
       <div aria-hidden="true" className="hero-wash absolute inset-0" />
 
-      <div className="relative z-[1] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[160px] pt-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-11 lg:pb-[235px] lg:pt-24">
+      <div className="relative z-[1] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[160px] pt-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-11 lg:pb-[max(235px,calc(14vw_+_55px))] lg:pt-24">
         <div>
           <Eyebrow>Brooklyn dog trainer</Eyebrow>
 
