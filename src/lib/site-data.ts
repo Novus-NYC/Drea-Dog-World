@@ -136,18 +136,13 @@ export const trainingMethods: string[] = [
   "Boundary setting",
   "Crate training",
   "Gradual desensitization",
-  "Never a shock collar",
 ]
 
-export const helpsWith: string[] = [
-  "Leash pulling",
-  "Dog aggression",
-  "Human aggression",
-  "Separation anxiety",
-  "Housebreaking",
-  "Jumping",
-  "Barking",
-  "Puppy manners",
+export const helpsWith: { place: string; problems: string[] }[] = [
+  { place: "On walks", problems: ["Leash pulling", "Dog aggression"] },
+  { place: "With people", problems: ["Human aggression", "Jumping"] },
+  { place: "At home", problems: ["Separation anxiety", "Housebreaking", "Barking"] },
+  { place: "Puppies", problems: ["Puppy manners"] },
 ]
 
 export const issueTips: IssueTip[] = [
