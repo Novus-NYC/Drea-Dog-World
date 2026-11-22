@@ -1,10 +1,12 @@
+import type { Metadata } from "next"
+import AboutHero from "@/lib/components/about/about-hero"
+import { business } from "@/lib/site-data"
+
+export const metadata: Metadata = {
+  title: "About",
+  description: `Meet ${business.owner}, Brooklyn’s dog trainer and behavioral consultant, with more than 30 years of working with dogs and their people.`,
+}
+
 export default function AboutPage() {
-  return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">About</h1>
-      <p className="text-gray-600">
-        Replace this with the business story, mission, and key details.
-      </p>
-    </div>
-  )
+  return <AboutHero />
 }

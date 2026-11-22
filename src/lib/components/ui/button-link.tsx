@@ -12,7 +12,7 @@ export const buttonBase =
 
 export const buttonVariants = {
   primary: "bg-red text-white shadow-button hover:bg-red-deep hover:shadow-button-hover",
-  secondary: "bg-sheet text-ink shadow-[inset_0_0_0_2px_var(--color-ink)]",
+  secondary: "bg-[color-mix(in_srgb,var(--color-sheet)_45%,transparent)] text-ink shadow-[inset_0_0_0_2px_var(--color-ink)] hover:bg-sheet",
 }
 
 export default function ButtonLink({ href, children, variant = "primary", className = "" }: ButtonLinkProps) {

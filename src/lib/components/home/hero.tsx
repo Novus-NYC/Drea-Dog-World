@@ -2,6 +2,7 @@ import Image from "next/image"
 import ButtonLink from "@/lib/components/ui/button-link"
 import Eyebrow from "@/lib/components/ui/eyebrow"
 import PawIcon from "@/lib/components/icons/paw-icon"
+import Skyline from "@/lib/components/ui/skyline"
 import VideoPlayer from "@/lib/components/ui/video-player"
 import { business, heroVideo, primaryCta, routes } from "@/lib/site-data"
 
@@ -84,9 +85,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[120px] lg:h-[200px]">
-        <Image src="/images/skyline.svg" alt="" fill unoptimized className="object-cover object-bottom" />
-      </div>
+      <Skyline />
     </section>
   )
 }
