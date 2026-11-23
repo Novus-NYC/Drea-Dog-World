@@ -8,7 +8,7 @@ export default function Specialty() {
       aria-labelledby="specialty-heading"
       className="torn-edges relative -mt-[22px] bg-blue pb-24 pt-28 text-sheet lg:pb-[110px] lg:pt-[120px]"
     >
-      <div className="mx-auto grid max-w-content items-center gap-16 px-gutter lg:grid-cols-[1.1fr_0.9fr] lg:gap-[60px]">
+      <div data-reveal className="mx-auto grid max-w-content items-center gap-16 px-gutter lg:grid-cols-[1.1fr_0.9fr] lg:gap-[60px]">
         <div>
           <h2 id="specialty-heading" className="text-heading">
             Bully breeds need <span className="accent whitespace-nowrap text-blush">love too.</span>

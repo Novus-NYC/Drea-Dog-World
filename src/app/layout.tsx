@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Fraunces, Work_Sans } from "next/font/google"
 import Navbar from "@/lib/components/layout/navbar"
 import Footer from "@/lib/components/layout/footer"
+import ScrollReveal from "@/lib/components/ui/scroll-reveal"
 import { business } from "@/lib/site-data"
 
 const fraunces = Fraunces({ style: ["normal", "italic"], axes: ["opsz"], subsets: ["latin"], variable: "--font-fraunces", display: "swap" })
@@ -31,6 +32,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ScrollReveal />
       </body>
     </html>
   )

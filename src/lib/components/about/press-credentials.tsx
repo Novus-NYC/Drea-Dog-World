@@ -36,7 +36,7 @@ export default function PressCredentials() {
           As seen <span className="accent">in.</span>
         </h2>
 
-        <ul className="mt-9 grid grid-cols-2 gap-px border-b border-t-2 border-b-line border-t-ink bg-line lg:grid-cols-5">
+        <ul data-reveal-stagger className="mt-9 grid grid-cols-2 gap-px border-b border-t-2 border-b-line border-t-ink bg-line lg:grid-cols-5">
           {press.map((item) => (
             <li key={item.outlet} className="last:odd:col-span-2 lg:last:odd:col-span-1">
               <OutletColumn item={item} />

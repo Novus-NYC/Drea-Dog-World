@@ -80,7 +80,7 @@ export default function Letters() {
           Dogs who got their <span className="accent whitespace-nowrap">world back.</span>
         </h2>
 
-        <ul className="mt-10 columns-1 gap-8 md:columns-2">
+        <ul data-reveal-stagger className="mt-10 columns-1 gap-8 md:columns-2">
           {letters.map((letter, index) => (
             <Clipping
               key={letter.name}

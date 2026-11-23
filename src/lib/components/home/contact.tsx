@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     // overflow-x-clip keeps the card from making the page scroll sideways while it slides away on send
     <section id="contact" aria-labelledby="contact-heading" className="overflow-x-clip pb-24 pt-20 lg:pb-[110px] lg:pt-24">
-      <div className="mx-auto grid max-w-content items-start gap-12 px-gutter lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+      <div data-reveal className="mx-auto grid max-w-content items-start gap-12 px-gutter lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
         <div>
           <Eyebrow>Contact</Eyebrow>
           <h2 id="contact-heading" className="text-heading">

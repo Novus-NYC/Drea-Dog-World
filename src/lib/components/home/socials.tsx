@@ -53,7 +53,7 @@ export default function Socials() {
           </div>
         </div>
 
-        <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <ul data-reveal-stagger className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {instagramPosts.map((post) => (
             <li key={post.href}>
               <a

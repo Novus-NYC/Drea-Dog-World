@@ -24,7 +24,7 @@ export default function ContactCta({ eyebrow, title, accent, text, torn = true }
       aria-labelledby="contact-cta-heading"
       className={`bg-paper pb-10 lg:pb-14 ${torn ? "torn-top relative -mt-[22px] pt-28 lg:pt-[120px]" : "pt-24 lg:pt-[110px]"}`}
     >
-      <div className="mx-auto grid max-w-content items-center gap-12 px-gutter lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
+      <div data-reveal className="mx-auto grid max-w-content items-center gap-12 px-gutter lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
           <h2 id="contact-cta-heading" className="text-display">

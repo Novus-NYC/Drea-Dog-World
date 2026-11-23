@@ -18,7 +18,7 @@ export default function CommonIssues() {
         </h2>
         <p className="mt-3 max-w-prose text-steel">Pick one. {business.nickname} has a tip.</p>
 
-        <ul className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ul data-reveal-stagger className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {issueTips.map((item, index) => (
             <IssueCard
               key={item.issue}

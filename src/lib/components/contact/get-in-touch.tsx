@@ -17,7 +17,7 @@ export default function GetInTouch() {
       aria-labelledby="get-in-touch-heading"
       className="torn-top relative -mt-[22px] overflow-x-clip bg-paper pb-24 pt-28 lg:pb-[110px] lg:pt-[120px]"
     >
-      <div className="mx-auto grid max-w-content items-start gap-12 px-gutter lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+      <div data-reveal className="mx-auto grid max-w-content items-start gap-12 px-gutter lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
         <div>
           <Eyebrow>Get in touch</Eyebrow>
           <h2 id="get-in-touch-heading" className="text-heading">

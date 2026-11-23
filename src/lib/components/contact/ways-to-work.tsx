@@ -41,7 +41,7 @@ export default function WaysToWork() {
             </figcaption>
           </figure>
 
-          <ul className="grid gap-px self-start overflow-hidden rounded-frame lg:col-start-2 lg:row-start-2 bg-[color-mix(in_srgb,var(--color-sheet)_16%,var(--color-deep))] text-sheet sm:grid-cols-2">
+          <ul data-reveal-stagger className="grid gap-px self-start overflow-hidden rounded-frame lg:col-start-2 lg:row-start-2 bg-[color-mix(in_srgb,var(--color-sheet)_16%,var(--color-deep))] text-sheet sm:grid-cols-2">
             {waysToWork.map((way, index) => {
               const selected = index === active
 

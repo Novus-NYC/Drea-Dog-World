@@ -9,7 +9,7 @@ export default function Method() {
           The four <span className="accent">P’s.</span>
         </h2>
 
-        <ol className="mt-10 grid gap-px overflow-hidden rounded-frame bg-[color-mix(in_srgb,var(--color-sheet)_16%,var(--color-deep))] text-sheet sm:grid-cols-2 lg:grid-cols-4">
+        <ol data-reveal-stagger className="mt-10 grid gap-px overflow-hidden rounded-frame bg-[color-mix(in_srgb,var(--color-sheet)_16%,var(--color-deep))] text-sheet sm:grid-cols-2 lg:grid-cols-4">
           {fourPs.map((p) => (
             <li key={p.name} className="bg-deep px-7 py-8">
               <h3 className="text-[1.75rem] text-sheet">

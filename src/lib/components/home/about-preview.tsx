@@ -20,7 +20,7 @@ export default function AboutPreview() {
       aria-labelledby="about-heading"
       className="bg-sheet py-20 lg:py-[90px]"
     >
-      <div className="mx-auto grid max-w-content items-center gap-14 px-gutter lg:grid-cols-[0.9fr_1.1fr]">
+      <div data-reveal className="mx-auto grid max-w-content items-center gap-14 px-gutter lg:grid-cols-[0.9fr_1.1fr]">
         <div className="relative mb-28 mr-[8%] lg:mb-[130px] lg:mt-12">
           <figure className="frame frame-inset frame-brick aspect-[4/5] shadow-soft outline-sheet [--frame-x:-16px] [--frame-y:16px]">
             <Image

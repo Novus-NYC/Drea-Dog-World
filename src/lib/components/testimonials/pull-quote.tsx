@@ -13,7 +13,7 @@ export default function PullQuote() {
       aria-label={`Featured review from ${review.name}`}
       className="bg-ink pb-20 pt-16 text-sheet lg:pb-24 lg:pt-20"
     >
-      <figure className="mx-auto grid max-w-content items-end gap-8 px-gutter lg:grid-cols-[1fr_auto] lg:gap-16">
+      <figure data-reveal className="mx-auto grid max-w-content items-end gap-8 px-gutter lg:grid-cols-[1fr_auto] lg:gap-16">
         <blockquote>
           <p className="max-w-[22ch] font-display text-[clamp(1.875rem,4vw,3rem)] font-semibold leading-tight">
             <span className="text-red">“</span>

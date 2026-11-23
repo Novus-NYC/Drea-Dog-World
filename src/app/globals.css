@@ -211,6 +211,52 @@
       radial-gradient(1px 1px at 47% 80%, #fff, transparent);
   }
 
+  /* ---------- Scroll reveals (see ui/scroll-reveal.tsx) ----------
+     Uses the separate "translate" property so it never fights tilted or flipped elements. */
+
+  .reveal-ready [data-reveal],
+  .reveal-ready [data-reveal-stagger] > * {
+    transition:
+      opacity 600ms ease-out,
+      translate 600ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(2) {
+    transition-delay: 80ms;
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(3) {
+    transition-delay: 160ms;
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(4) {
+    transition-delay: 240ms;
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(5) {
+    transition-delay: 320ms;
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(6) {
+    transition-delay: 400ms;
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(7) {
+    transition-delay: 480ms;
+  }
+
+  .reveal-ready [data-reveal-stagger] > :nth-child(8) {
+    transition-delay: 560ms;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-ready [data-reveal]:not(.is-revealed),
+    .reveal-ready [data-reveal-stagger]:not(.is-revealed) > * {
+      opacity: 0;
+      translate: 0 20px;
+    }
+  }
+
   /* ---------- Hero entrances (interior page heroes) ---------- */
 
   .about-enter {
@@ -256,65 +302,6 @@
     }
   }
 
-  /* ---------- Paw trail (press section) ---------- */
-
-  .paw-step {
-    display: block;
-    opacity: 0;
-  }
-
-  .paw-step.is-in {
-    animation: paw-step 400ms both;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .paw-step,
-    .paw-step.is-in {
-      animation: none;
-      opacity: 0.85;
-      transform: rotate(-8deg);
-    }
-  }
-
-  /* ---------- Review rows (reviews section) ---------- */
-
-  .review-row {
-    overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  }
-
-  .review-track {
-    display: flex;
-    width: max-content;
-    animation: review-slide 70s linear infinite;
-  }
-
-  .review-row-reverse .review-track {
-    animation-direction: reverse;
-  }
-
-  .review-rows.is-paused .review-track {
-    animation-play-state: paused;
-  }
-
-  @media (hover: hover) {
-    .review-rows:hover .review-track {
-      animation-play-state: paused;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .review-row {
-      mask-image: none;
-    }
-
-    .review-track {
-      display: block;
-      width: auto;
-      animation: none;
-    }
-  }
-
   /* ---------- Contact form (homepage) ---------- */
 
   .step-in {
@@ -355,23 +342,6 @@
 }
 
 @keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes paw-step {
-  from {
-    opacity: 0;
-    transform: scale(1.7) rotate(-18deg);
-  }
-  to {
-    opacity: 0.85;
-    transform: rotate(-8deg);
-  }
-}
-
-@keyframes review-slide {
   to {
     transform: translateX(-50%);
   }

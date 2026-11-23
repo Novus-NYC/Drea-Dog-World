@@ -24,7 +24,7 @@ export default function Reviews() {
           </ButtonLink>
         </div>
 
-        <ul className="mt-12 grid gap-10 border-t-2 border-ink pt-10 md:grid-cols-3 md:gap-12">
+        <ul data-reveal-stagger className="mt-12 grid gap-10 border-t-2 border-ink pt-10 md:grid-cols-3 md:gap-12">
           {reviews.map((review) => (
             <li key={review.name}>
               <figure>
