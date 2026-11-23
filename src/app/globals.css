@@ -171,6 +171,16 @@
     clip-path: polygon(0 24px, 6% 6px, 14% 22px, 25% 4px, 38% 20px, 52% 5px, 66% 21px, 79% 4px, 90% 20px, 100% 6px, 100% 100%, 0 100%);
   }
 
+  /* Footer skyline background: the page color by default. A page whose last section
+     has data-footer-sky="band" gets the band color, so that section runs behind the buildings. */
+  .footer-sky {
+    background: var(--color-paper);
+  }
+
+  body:has([data-footer-sky="band"]) .footer-sky {
+    background: var(--color-band);
+  }
+
   /* ---------- About hero: doorway and floating windows ---------- */
 
   .about-enter {
