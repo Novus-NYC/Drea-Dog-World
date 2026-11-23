@@ -7,6 +7,8 @@ type ContactCtaProps = {
   title: string
   accent: string
   text: string
+  // Torn top edge into the section above. Turn it off when a straight edge reads better (like under the About photo strip).
+  torn?: boolean
 }
 
 const contactWays = [
@@ -16,11 +18,11 @@ const contactWays = [
 ]
 
 // The closing "get in touch" section at the end of a page.
-export default function ContactCta({ eyebrow, title, accent, text }: ContactCtaProps) {
+export default function ContactCta({ eyebrow, title, accent, text, torn = true }: ContactCtaProps) {
   return (
     <section
       aria-labelledby="contact-cta-heading"
-      className="torn-top relative -mt-[22px] bg-paper pb-10 pt-28 lg:pb-14 lg:pt-[120px]"
+      className={`bg-paper pb-10 lg:pb-14 ${torn ? "torn-top relative -mt-[22px] pt-28 lg:pt-[120px]" : "pt-24 lg:pt-[110px]"}`}
     >
       <div className="mx-auto grid max-w-content items-center gap-12 px-gutter lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
         <div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import AboutHero from "@/lib/components/about/about-hero"
 import HerStory from "@/lib/components/about/her-story"
 import Method from "@/lib/components/about/method"
+import PhotoStrip from "@/lib/components/about/photo-strip"
 import PressCredentials from "@/lib/components/about/press-credentials"
 import Specialty from "@/lib/components/about/specialty"
 import WatchVideos from "@/lib/components/about/watch-videos"
@@ -22,7 +23,9 @@ export default function AboutPage() {
       <Method />
       <Specialty />
       <PressCredentials />
+      <PhotoStrip />
       <ContactCta
+        torn={false}
         eyebrow="Ready when you are"
         title="Ready to"
         accent="meet her?"
