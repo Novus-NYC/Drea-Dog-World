@@ -1,5 +1,5 @@
 import Eyebrow from "@/lib/components/ui/eyebrow"
-import ContactForm from "@/lib/components/home/contact-form"
+import ContactForm from "@/lib/components/ui/contact-form"
 import { business, contact } from "@/lib/site-data"
 
 const contactWays = [
