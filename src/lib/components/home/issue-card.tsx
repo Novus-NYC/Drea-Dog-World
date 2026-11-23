@@ -36,9 +36,9 @@ export default function IssueCard({ item, dark = false, tilt }: IssueCardProps) 
             <span className="mt-1 font-display text-[clamp(1.875rem,2.8vw,2.375rem)] font-semibold italic leading-[1.1]">
               {item.issue}
             </span>
-            <span className="absolute inset-x-5 bottom-3 flex items-center justify-between text-[0.8125rem] font-semibold uppercase tracking-[0.12em] opacity-75">
-              Tip inside
-              <PawIcon className="w-5 text-red" />
+            <span className="absolute inset-x-5 bottom-3 flex items-center justify-between text-[0.8125rem] font-semibold uppercase tracking-[0.12em]">
+              <span className="opacity-75">Tip inside</span>
+              <PawIcon className="w-7 text-red" />
             </span>
           </span>
 
