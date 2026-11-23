@@ -120,6 +120,48 @@ export const services: string[] = [
   "Socialization",
 ]
 
+// Contact page: the ways Andrea works with a dog (no fixed prices, she quotes after meeting the dog).
+export type WayToWork = {
+  name: string
+  description: string
+  photo: { src: string; alt: string }
+}
+
+export const waysToWork: WayToWork[] = [
+  {
+    name: "Private training",
+    description: "Manners and leash skills, at home and on your block.",
+    photo: {
+      src: "/images/drea-park-bench-shepherd.jpg",
+      alt: "Andrea on a park bench teaching a tan shepherd mix to sit and watch her",
+    },
+  },
+  {
+    name: "Behavioral rehab",
+    description: "Reactivity, aggression, fear, and separation anxiety.",
+    photo: {
+      src: "/images/drea-bus-stop-orange-sweater.jpg",
+      alt: "Andrea at a busy bus stop holding a small black and white dog in an orange fleece",
+    },
+  },
+  {
+    name: "Puppy Boot Camp",
+    description: "Housebreaking, crate, bite inhibition, and first cues.",
+    photo: {
+      src: "/images/drea-street-fair-poodle-kids.jpg",
+      alt: "Andrea showing two boys how to greet a red poodle at a street fair",
+    },
+  },
+  {
+    name: "Socialization",
+    description: "Calm confidence around dogs and people. CGC prep too.",
+    photo: {
+      src: "/images/drea-park-group-great-dane.jpg",
+      alt: "Andrea in a park with a Great Dane and other dogs at a group meetup",
+    },
+  },
+]
+
 export const specialties: string[] = [
   "Stressed dogs",
   "Fearful dogs",

@@ -1,16 +1,20 @@
+import type { Metadata } from "next"
+import ContactHero from "@/lib/components/contact/contact-hero"
+import GetInTouch from "@/lib/components/contact/get-in-touch"
+import WaysToWork from "@/lib/components/contact/ways-to-work"
+import { business } from "@/lib/site-data"
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: `Tell ${business.owner} about your dog. Call, text, email, or fill out a short form and she’ll write back with where she’d start.`,
+}
+
 export default function ContactPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Contact</h1>
-      <p className="text-gray-600">
-        Replace this with contact info (phone, email, address) and/or a contact form.
-      </p>
-
-      <div className="rounded-md border p-4 text-sm text-gray-600">
-        <div><span className="font-medium text-gray-800">Email:</span> contact@business.com</div>
-        <div><span className="font-medium text-gray-800">Phone:</span> (000) 000-0000</div>
-        <div><span className="font-medium text-gray-800">Address:</span> 123 Main St, City, ST</div>
-      </div>
-    </div>
+    <>
+      <ContactHero />
+      <GetInTouch />
+      <WaysToWork />
+    </>
   )
 }
