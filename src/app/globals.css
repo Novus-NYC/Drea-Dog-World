@@ -181,6 +181,15 @@
     background: var(--color-band);
   }
 
+  /* Sideways-scrolling rows that still swipe but don't show a scrollbar (About photo strip on phones) */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   /* A few faint stars in the upper part of the night hero sky (Contact) */
   .night-stars::before {
     content: "";

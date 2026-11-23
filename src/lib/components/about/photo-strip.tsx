@@ -43,7 +43,7 @@ const photos = [
 export default function PhotoStrip() {
   return (
     <section aria-label="Andrea around the neighborhood" className="bg-ink py-2.5">
-      <ul className="flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-2.5 lg:grid lg:snap-none lg:grid-cols-7 lg:overflow-visible">
+      <ul className="no-scrollbar flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-2.5 lg:grid lg:snap-none lg:grid-cols-7 lg:overflow-visible">
         {photos.map((photo) => (
           <li
             key={photo.src}
