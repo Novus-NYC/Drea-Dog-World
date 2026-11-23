@@ -181,6 +181,27 @@
     background: var(--color-band);
   }
 
+  /* A few faint stars in the upper part of the night hero sky (Contact) */
+  .night-stars::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 45% 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image:
+      radial-gradient(1.5px 1.5px at 8% 22%, #fff, transparent),
+      radial-gradient(1px 1px at 17% 58%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 29% 12%, #fff, transparent),
+      radial-gradient(1px 1px at 41% 40%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 53% 18%, #fff, transparent),
+      radial-gradient(1px 1px at 62% 64%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 71% 30%, #fff, transparent),
+      radial-gradient(1px 1px at 84% 14%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 93% 48%, #fff, transparent),
+      radial-gradient(1px 1px at 47% 80%, #fff, transparent);
+  }
+
   /* ---------- About hero: doorway and floating windows ---------- */
 
   .about-enter {

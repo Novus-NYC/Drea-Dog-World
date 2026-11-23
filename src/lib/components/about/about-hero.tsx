@@ -1,8 +1,7 @@
 import Image from "next/image"
 import ButtonLink from "@/lib/components/ui/button-link"
-import Eyebrow from "@/lib/components/ui/eyebrow"
-import Skyline from "@/lib/components/ui/skyline"
-import { business, primaryCta } from "@/lib/site-data"
+import PageHero from "@/lib/components/ui/page-hero"
+import { business } from "@/lib/site-data"
 
 // Each window floats at its own spot, size, and tilt around the doorway, without touching it.
 const windows = [
@@ -36,83 +35,62 @@ const trim = "bg-paper shadow-[0_22px_34px_rgba(43,35,33,0.22),inset_0_0_0_1.5px
 
 export default function AboutHero() {
   return (
-    <section aria-labelledby="about-hero-heading" className="relative isolate overflow-hidden">
-      <Image
-        src="/images/drea-stoop.jpg"
-        alt=""
-        fill
-        preload
-        sizes="100vw"
-        className="object-cover object-[center_35%]"
-      />
-      <div aria-hidden="true" className="hero-wash absolute inset-0" />
-      {/* Extra wash behind the photo scene so the background Andrea doesn’t compete with the windows */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 hidden bg-[linear-gradient(90deg,transparent_25%,color-mix(in_srgb,var(--color-paper)_88%,transparent)_45%,color-mix(in_srgb,var(--color-paper)_80%,transparent)_100%)] lg:block"
-      />
+    <PageHero
+      id="about-hero-heading"
+      eyebrow={`About ${business.nickname}`}
+      tone="sunset"
+      title={
+        <>
+          Meet <span className="accent">{business.owner.split(" ")[0]}.</span>
+        </>
+      }
+      lead={`${business.ownerRole}. ${business.slogan}`}
+      action={
+        <ButtonLink href="#press" variant="secondary">
+          Press and credentials
+        </ButtonLink>
+      }
+    >
+      <div className="relative mx-auto aspect-[27/20] w-full max-w-[460px]">
+        <div className="about-enter relative z-[1] mx-auto w-[41%] pt-[3%]">
+          <figure className="rounded-t-[999px] rounded-b-[8px] bg-deep p-[4.5%] shadow-lift">
+            <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b border-[3px] border-blush">
+              <Image
+                src="/images/drea-sidewalk-pit-bull.jpg"
+                alt="Andrea on a tree-lined Brooklyn sidewalk with a pit bull at her feet"
+                fill
+                preload
+                sizes="190px"
+                className="object-cover object-[center_30%]"
+              />
+            </span>
+          </figure>
 
-      <div className="relative z-[2] mx-auto grid max-w-content items-center gap-12 px-gutter pb-[150px] pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:pb-[max(210px,calc(14vw_+_30px))] lg:pt-20">
-        <div>
-          <Eyebrow>About {business.nickname}</Eyebrow>
-          <h1 id="about-hero-heading" className="text-display">
-            Meet <span className="accent">{business.owner.split(" ")[0]}.</span>
-          </h1>
-          <p className="my-6 max-w-[34ch] text-lead">
-            {business.ownerRole}. {business.slogan}
-          </p>
-
-          <div className="flex flex-wrap gap-4">
-            <ButtonLink href={primaryCta.href}>{primaryCta.label}</ButtonLink>
-            <ButtonLink href="#press" variant="secondary">
-              Press and credentials
-            </ButtonLink>
+          <div aria-hidden="true" className="mx-[-7%] mt-1 grid justify-items-center">
+            <span className="block h-2 w-[84%] bg-red sm:h-3" />
+            <span className="block h-2 w-[92%] bg-red-deep sm:h-3" />
+            <span className="block h-2 w-full bg-[color-mix(in_srgb,var(--color-red-deep)_85%,black)] sm:h-3" />
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-[27/20] w-full max-w-[560px]">
-          <div className="about-enter relative z-[1] mx-auto w-[41%] pt-[3%]">
-            <figure className="rounded-t-[999px] rounded-b-[8px] bg-deep p-[4.5%] shadow-lift">
-              <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b border-[3px] border-blush">
-                <Image
-                  src="/images/drea-sidewalk-pit-bull.jpg"
-                  alt="Andrea on a tree-lined Brooklyn sidewalk with a pit bull at her feet"
-                  fill
-                  preload
-                  sizes="(min-width: 1024px) 290px, 41vw"
-                  className="object-cover object-[center_30%]"
-                />
-              </span>
-            </figure>
-
-            <div aria-hidden="true" className="mx-[-7%] mt-1 grid justify-items-center">
-              <span className="block h-2 w-[84%] bg-red sm:h-3" />
-              <span className="block h-2 w-[92%] bg-red-deep sm:h-3" />
-              <span className="block h-2 w-full bg-[color-mix(in_srgb,var(--color-red-deep)_85%,black)] sm:h-3" />
-            </div>
-          </div>
-
-          <ul aria-label="Moments from Andrea’s life with dogs">
-            {windows.map((window, index) => (
-              <li key={window.src} className={`absolute ${window.place}`}>
-                <div className="about-enter" style={{ animationDelay: `${350 + index * 130}ms` }}>
-                  <figure
-                    className={`window-float relative rounded-t-[999px] rounded-b p-[5%] ${trim}`}
-                    style={{ animationDuration: `${6 + index * 0.7}s`, animationDelay: `${-index * 1.6}s` }}
-                  >
-                    <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-sm">
-                      <Image src={window.src} alt={window.alt} fill sizes="(min-width: 1024px) 150px, 21vw" className={`object-cover ${window.focus}`} />
-                    </span>
-                    <span aria-hidden="true" className={`absolute -inset-x-[6%] -bottom-1 h-[5%] min-h-1.5 rounded-sm ${trim}`} />
-                  </figure>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul aria-label="Moments from Andrea’s life with dogs">
+          {windows.map((window, index) => (
+            <li key={window.src} className={`absolute ${window.place}`}>
+              <div className="about-enter" style={{ animationDelay: `${350 + index * 130}ms` }}>
+                <figure
+                  className={`window-float relative rounded-t-[999px] rounded-b p-[5%] ${trim}`}
+                  style={{ animationDuration: `${6 + index * 0.7}s`, animationDelay: `${-index * 1.6}s` }}
+                >
+                  <span className="relative block aspect-[4/5] overflow-hidden rounded-t-[999px] rounded-b-sm">
+                    <Image src={window.src} alt={window.alt} fill sizes="100px" className={`object-cover ${window.focus}`} />
+                  </span>
+                  <span aria-hidden="true" className={`absolute -inset-x-[6%] -bottom-1 h-[5%] min-h-1.5 rounded-sm ${trim}`} />
+                </figure>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
-
-      <Skyline />
-    </section>
+    </PageHero>
   )
 }

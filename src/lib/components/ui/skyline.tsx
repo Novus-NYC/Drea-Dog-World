@@ -1,9 +1,18 @@
 import Image from "next/image"
 
-export default function Skyline() {
+type SkylineProps = {
+  // Compact is the shorter row of small brownstones under the interior page heroes,
+  // so it doesn't look like a copy of the homepage and footer skyline.
+  compact?: boolean
+}
+
+export default function Skyline({ compact = false }: SkylineProps) {
+  const src = compact ? "/images/skyline-rowhouses.svg" : "/images/skyline.svg"
+  const height = compact ? "h-[clamp(64px,6.7vw,128px)]" : "h-[clamp(110px,14vw,360px)]"
+
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[clamp(110px,14vw,360px)]">
-      <Image src="/images/skyline.svg" alt="" fill unoptimized className="object-cover object-bottom" />
+    <div aria-hidden="true" className={`pointer-events-none absolute inset-x-0 bottom-0 z-[1] ${height}`}>
+      <Image src={src} alt="" fill unoptimized className="object-cover object-bottom" />
     </div>
   )
 }
