@@ -4,37 +4,37 @@ import Image from "next/image"
 // Desktop: seven photos fill the width. Phones: the strip scrolls sideways.
 const photos = [
   {
-    src: "/images/drea-vintage-fifth-avenue.jpg",
+    src: "/images/photos/vintage-fifth-avenue.jpg",
     alt: "An old photo of a young Andrea with two friends on a city sidewalk",
     focus: "object-[center_40%]",
   },
   {
-    src: "/images/drea-home-session-aussie.jpg",
+    src: "/images/photos/home-session-aussie.jpg",
     alt: "Andrea in a red cap at a dining table, working with an Australian shepherd",
     focus: "object-[40%_center]",
   },
   {
-    src: "/images/drea-street-fair-obstacle-course.jpg",
+    src: "/images/photos/street-fair-obstacle-course.jpg",
     alt: "Andrea with a poodle beside a dog obstacle course on a closed Brooklyn street",
     focus: "object-[center_45%]",
   },
   {
-    src: "/images/drea-fall-market-dog.jpg",
+    src: "/images/photos/fall-market-dog.jpg",
     alt: "Andrea in a black hoodie with a brown dog at a fall market",
     focus: "object-center",
   },
   {
-    src: "/images/drea-tee-spotted-pointer.jpg",
+    src: "/images/photos/tee-spotted-pointer.jpg",
     alt: "Andrea in a Drea Dog World tee with a spotted pointer",
     focus: "object-top",
   },
   {
-    src: "/images/drea-festival-lawn-chair.jpg",
+    src: "/images/photos/festival-lawn-chair.jpg",
     alt: "Andrea relaxing in a lawn chair at a crowded outdoor festival",
     focus: "object-[center_60%]",
   },
   {
-    src: "/images/drea-park-walk-poodle.jpg",
+    src: "/images/photos/park-walk-poodle.jpg",
     alt: "Andrea in the park with a red poodle on a leash",
     focus: "object-center",
   },

@@ -132,7 +132,7 @@ export const waysToWork: WayToWork[] = [
     name: "Private training",
     description: "Manners and leash skills, at home and on your block.",
     photo: {
-      src: "/images/drea-park-bench-shepherd.jpg",
+      src: "/images/photos/park-bench-shepherd.jpg",
       alt: "Andrea on a park bench teaching a tan shepherd mix to sit and watch her",
     },
   },
@@ -140,7 +140,7 @@ export const waysToWork: WayToWork[] = [
     name: "Behavioral rehab",
     description: "Reactivity, aggression, fear, and separation anxiety.",
     photo: {
-      src: "/images/drea-bus-stop-orange-sweater.jpg",
+      src: "/images/photos/bus-stop-orange-sweater.jpg",
       alt: "Andrea at a busy bus stop holding a small black and white dog in an orange fleece",
     },
   },
@@ -148,7 +148,7 @@ export const waysToWork: WayToWork[] = [
     name: "Puppy Boot Camp",
     description: "Housebreaking, crate, bite inhibition, and first cues.",
     photo: {
-      src: "/images/drea-street-fair-poodle-kids.jpg",
+      src: "/images/photos/street-fair-poodle-kids.jpg",
       alt: "Andrea showing two boys how to greet a red poodle at a street fair",
     },
   },
@@ -156,7 +156,7 @@ export const waysToWork: WayToWork[] = [
     name: "Socialization",
     description: "Calm confidence around dogs and people. CGC prep too.",
     photo: {
-      src: "/images/drea-park-group-great-dane.jpg",
+      src: "/images/photos/park-group-great-dane.jpg",
       alt: "Andrea in a park with a Great Dane and other dogs at a group meetup",
     },
   },
@@ -257,14 +257,14 @@ export const credentials: Credential[] = [
     name: "AKC Canine Good Citizen Evaluator",
     label: "AKC Canine Good Citizen Evaluator",
     detail: "Certified to evaluate dogs for the CGC title.",
-    badge: { src: "/images/badge-akc-cgc.png", alt: "AKC Canine Good Citizen Evaluator badge" },
+    badge: { src: "/images/badges/akc-cgc.png", alt: "AKC Canine Good Citizen Evaluator badge" },
   },
   {
     kind: "Membership",
     name: "APDT",
     label: "Member, Association of Professional Dog Trainers",
     detail: "Association of Professional Dog Trainers.",
-    badge: { src: "/images/badge-apdt.png", alt: "Association of Professional Dog Trainers member badge" },
+    badge: { src: "/images/badges/apdt.png", alt: "Association of Professional Dog Trainers member badge" },
   },
   {
     kind: "Commendation",
@@ -284,14 +284,14 @@ export const press: PressMention[] = [
   },
   {
     outlet: "Narratively",
-    logo: "/images/press-narratively.png",
+    logo: "/images/press/narratively.png",
     headline: "Bad Dog/Good Dog",
     note: "Profile and short film",
     url: "https://www.narratively.com/p/bad-doggood-dog",
   },
   {
     outlet: "ShoutoutAtlanta",
-    logo: "/images/press-shoutoutatlanta.png",
+    logo: "/images/press/shoutoutatlanta.png",
     headline: "Meet Andrea Smith, Professional Dog Trainer, Producer",
     note: "Interview, 2023",
     url: "https://shoutoutatlanta.com/meet-andrea-smith-professional-dog-trainer-producer/",
@@ -399,32 +399,32 @@ export type InstagramPost = {
 
 export const instagramPosts: InstagramPost[] = [
   {
-    image: "/images/ig-rainy-sidewalk.jpg",
+    image: "/images/instagram/rainy-sidewalk.jpg",
     alt: "A puppy and a Rottweiler on a rainy Brooklyn sidewalk",
     href: "https://www.instagram.com/p/Dfiky9SRmA_/",
   },
   {
-    image: "/images/ig-backyard-training.jpg",
+    image: "/images/instagram/backyard-training.jpg",
     alt: "Andrea training a puppy and a Rottweiler in a backyard",
     href: "https://www.instagram.com/p/DfFTZQARuCc/",
   },
   {
-    image: "/images/ig-sidewalk-pit-bull.jpg",
+    image: "/images/instagram/sidewalk-pit-bull.jpg",
     alt: "Andrea sitting on a Brooklyn sidewalk with a pit bull",
     href: "https://www.instagram.com/p/DfE5MuOx9og/",
   },
   {
-    image: "/images/ig-pond-walk.jpg",
+    image: "/images/instagram/pond-walk.jpg",
     alt: "Andrea walking a puppy beside a pond full of geese",
     href: "https://www.instagram.com/p/DdNJJ5ARlri/",
   },
   {
-    image: "/images/ig-rescue-dog.jpg",
+    image: "/images/instagram/rescue-dog.jpg",
     alt: "A search and rescue dog carried on a rope line at Ground Zero",
     href: "https://www.instagram.com/p/DdHl7YTyWMy/",
   },
   {
-    image: "/images/ig-brick-wall-poodle.jpg",
+    image: "/images/instagram/brick-wall-poodle.jpg",
     alt: "Andrea holding a curly poodle mix against a brick wall",
     href: "https://www.instagram.com/p/DbdYcJmxRvG/",
   },
@@ -457,7 +457,7 @@ export const heroVideo: Video = {
   provider: "vimeo",
   videoId: "82690809",
   duration: "4:19",
-  thumbnail: "/images/drea-apartment.jpg",
+  thumbnail: "/images/photos/apartment.jpg",
 }
 
 export const watchVideos: Video[] = [
@@ -466,21 +466,21 @@ export const watchVideos: Video[] = [
     provider: "vimeo",
     videoId: "180978314",
     duration: "6:37",
-    thumbnail: "/images/brooklyn-bites-back-title-card.jpg",
+    thumbnail: "/images/videos/brooklyn-bites-back-title-card.jpg",
   },
   {
     title: "Andrea Meets a Wolf Hybrid",
     provider: "vimeo",
     videoId: "68337365",
     duration: "3:02",
-    thumbnail: "/images/video-wolf-hybrid.jpg",
+    thumbnail: "/images/videos/wolf-hybrid.jpg",
   },
   {
     title: "Critter Crusades presents Dog Trainer Andrea Smith",
     provider: "youtube",
     videoId: "1SKF7MFDoAs",
     duration: "27:18",
-    thumbnail: "/images/video-critter-crusades.jpg",
+    thumbnail: "/images/videos/critter-crusades.jpg",
   },
   heroVideo,
 ]

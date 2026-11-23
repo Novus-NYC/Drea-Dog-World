@@ -28,7 +28,7 @@ export default function Specialty() {
           />
           <span className="relative block aspect-[4/5] overflow-hidden rounded-frame">
             <Image
-              src="/images/drea-bench-puppy.jpg"
+              src="/images/photos/bench-puppy.jpg"
               alt="Andrea sitting on a bench with a pit bull puppy on a red leash"
               fill
               sizes="(min-width: 1024px) 380px, 90vw"

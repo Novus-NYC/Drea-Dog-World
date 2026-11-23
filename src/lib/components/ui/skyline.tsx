@@ -7,7 +7,7 @@ type SkylineProps = {
 }
 
 export default function Skyline({ compact = false }: SkylineProps) {
-  const src = compact ? "/images/skyline-rowhouses.svg" : "/images/skyline.svg"
+  const src = compact ? "/images/illustrations/skyline-rowhouses.svg" : "/images/illustrations/skyline.svg"
   const height = compact ? "h-[clamp(64px,6.7vw,128px)]" : "h-[clamp(110px,14vw,360px)]"
 
   return (

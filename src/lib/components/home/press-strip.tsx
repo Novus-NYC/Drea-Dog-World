@@ -6,8 +6,8 @@ import { press, routes, type PressMention } from "@/lib/site-data"
 // Time and ShoutoutAtlanta are drawn with their own wordmarks; the NYT and Narratively get their
 // logo mark plus the name. The wordmark files are dark, so a filter turns them cream on the dark bar.
 const wordmarks: Record<string, { src: string; width: number; height: number }> = {
-  "Time Magazine": { src: "/images/press-time-wordmark.svg", width: 65, height: 20 },
-  ShoutoutAtlanta: { src: "/images/press-shoutoutatlanta-wordmark.png", width: 126, height: 15 },
+  "Time Magazine": { src: "/images/press/time-wordmark.svg", width: 65, height: 20 },
+  ShoutoutAtlanta: { src: "/images/press/shoutoutatlanta-wordmark.png", width: 126, height: 15 },
 }
 
 // The order the outlets pass by in the strip (the About page keeps its own order).

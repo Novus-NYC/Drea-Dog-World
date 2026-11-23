@@ -24,7 +24,7 @@ export default function AboutPreview() {
         <div className="relative mb-28 mr-[8%] lg:mb-[130px] lg:mt-12">
           <figure className="frame frame-inset frame-brick aspect-[4/5] shadow-soft outline-sheet [--frame-x:-16px] [--frame-y:16px]">
             <Image
-              src="/images/drea-park-snow.jpg"
+              src="/images/photos/park-snow.jpg"
               alt="Andrea training two dogs in a snowy Brooklyn dog park"
               fill
               sizes="(min-width: 1024px) 460px, 90vw"
@@ -37,7 +37,7 @@ export default function AboutPreview() {
 
           <figure className="frame frame-inset absolute -bottom-[18%] -right-[8%] aspect-[4/5] w-[57%] shadow-lift outline-sheet before:hidden">
             <Image
-              src="/images/drea-bench-puppy.jpg"
+              src="/images/photos/bench-puppy.jpg"
               alt="Andrea Smith smiling on a bench with a tan pit bull puppy on a red leash"
               fill
               sizes="(min-width: 1024px) 290px, 57vw"

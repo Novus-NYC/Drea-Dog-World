@@ -7,20 +7,20 @@ import { business } from "@/lib/site-data"
 // Big photo: cream inset line, hairline offset, and a patch of halftone dots peeking out behind.
 // Small photos: cream inset line and a soft glow (shadow), tilted a touch like prints laid on top.
 const bigPhoto = {
-  src: "/images/drea-dog-mural-poodle.jpg",
+  src: "/images/photos/dog-mural-poodle.jpg",
   alt: "Andrea holding a poodle at a picnic table in front of a mural of dogs in astronaut suits",
 }
 
 const smallPhotos = [
   {
-    src: "/images/drea-rooftop-poodle.jpg",
+    src: "/images/photos/rooftop-poodle.jpg",
     alt: "Andrea smiling on a rooftop with a red poodle in her arms",
     place: "right-0 top-0 rotate-[3deg]",
     focus: "object-[35%_35%]",
     aspect: "aspect-square",
   },
   {
-    src: "/images/drea-sidewalk-pit-bull-closeup.jpg",
+    src: "/images/photos/sidewalk-pit-bull-closeup.jpg",
     alt: "Andrea on a tree-lined Brooklyn sidewalk with a pit bull at her feet",
     // Portrait so both her face and the dog at her feet fit
     place: "-bottom-[4%] right-[4%] -rotate-2",
@@ -28,7 +28,7 @@ const smallPhotos = [
     aspect: "aspect-[4/5]",
   },
   {
-    src: "/images/drea-street-fair-booth-closeup.jpg",
+    src: "/images/photos/street-fair-booth-closeup.jpg",
     alt: "Andrea in a green Drea Dog World sweatshirt at her street fair booth, with dogs waiting at her feet",
     place: "bottom-[2%] left-0 rotate-2",
     focus: "object-center",

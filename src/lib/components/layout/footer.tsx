@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-white/85 [&_:focus-visible]:outline-blush">
       <div aria-hidden="true" className="footer-sky relative h-[clamp(110px,14vw,360px)]">
-        <Image src="/images/skyline.svg" alt="" fill unoptimized className="object-cover object-bottom" />
+        <Image src="/images/illustrations/skyline.svg" alt="" fill unoptimized className="object-cover object-bottom" />
       </div>
 
       <div className="mx-auto max-w-content px-gutter pb-9 pt-9">

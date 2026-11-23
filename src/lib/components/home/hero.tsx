@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="relative isolate overflow-hidden">
       <Image
-        src="/images/drea-stoop.jpg"
+        src="/images/photos/stoop.jpg"
         alt=""
         fill
         preload
