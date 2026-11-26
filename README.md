@@ -1,62 +1,49 @@
-# Purpose
-This repository is the base template that should be used for all future businesses, including basic files such as navbar, footer, and other configs.
+# Drea's Dog World
 
-# Business Name
+Website for **Drea's Dog World**, the Brooklyn dog training business of Andrea "Drea" Smith. Andrea has worked with dogs for more than 30 years. Her training is positive and reward-based, never a shock collar, with a focus on rescues, reactive dogs, and bully breeds.
 
-Replace this README with business-specific details.
+The site introduces Andrea, builds trust through press, credentials, reviews, and video, and gets dog owners to reach out.
 
----
+Built by [Novus](https://novusnyc.org) following the Novus build standard in `CLAUDE.md`.
 
-## 🚀 Overview
+## Pages
 
-Short description of the business and what this website is for.
+| Route | What's on it |
+| --- | --- |
+| `/` | Hero video, press banner, common issues, about preview, reviews, Instagram, contact form |
+| `/about` | Andrea's story, her TV work, the four P's, bully breeds, press and credentials |
+| `/testimonials` | Seven client stories and a link to Yelp |
+| `/contact` | Contact form, phone and email, and the ways to work together |
 
-Example:
-"This website serves as the official online presence for [Business Name], showcasing services, contact information, and brand identity."
+## Business details
 
----
+All business content (contact info, services, press, reviews, videos, photos) lives in one file: `src/lib/site-data.ts`. Edit that file to change text on the site.
 
-## 🛠 Tech Stack
+## Tech stack
 
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- Hosted on Vercel
+- [Next.js](https://nextjs.org) 16 (App Router), React 19, TypeScript
+- Tailwind CSS 3, with brand colors as CSS variables in `src/app/globals.css`
+- Fonts: Fraunces and Work Sans, loaded with `next/font`
+- No other runtime dependencies
 
----
-
-## 📂 Project Structure
-
-- `src/app` → App Router (homepage, layout, globals)
-- `src/app/pages` → Site pages (About, Contact, etc.)
-- `src/lib/components` → Shared UI components (Navbar/Footer)
-- `public` → Static assets
-
----
-
-## 🧑‍💻 Development
-
-Install dependencies:
+## Getting started
 
 ```bash
 npm install
-npm install --save-dev @types/react
+npm run dev          # http://localhost:3000
+npm run typecheck
+npm run lint
+npm run build        # stop the dev server first
 ```
 
-Run locally:
+## Project structure
 
-```bash
-npm run dev
 ```
-
----
-
-## ✏️ Customization Checklist
-
-- [ ] Replace Business Name in navbar + footer
-- [ ] Update metadata in `src/app/layout.tsx`
-- [ ] Replace homepage content (`src/app/page.tsx`)
-- [ ] Update About + Contact pages (`src/app/pages/*`)
-- [ ] Replace favicon + assets in `public/`
-- [ ] Update SEO metadata
-- [ ] (Optional) Update Novus credit link text / URL in the footer
+src/
+  app/                  Pages (one folder per route), layout, global styles, favicon
+  lib/
+    site-data.ts        All business content
+    components/         Sections grouped by page (home, about, testimonials, contact),
+                        plus shared layout, ui, and icons
+public/images/          photos, instagram, press, badges, videos, illustrations
+```

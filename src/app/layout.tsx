@@ -1,10 +1,22 @@
 import "./globals.css"
-import Navbar from "@/lib/components/navbar"
-import Footer from "@/lib/components/footer"
+import type { Metadata } from "next"
+import { Fraunces, Work_Sans } from "next/font/google"
+import Navbar from "@/lib/components/layout/navbar"
+import Footer from "@/lib/components/layout/footer"
+import ScrollReveal from "@/lib/components/ui/scroll-reveal"
+import { business } from "@/lib/site-data"
 
-export const metadata = {
-  title: "Business Name",
-  description: "Short description of the business."
+const fraunces = Fraunces({ style: ["normal", "italic"], axes: ["opsz"], subsets: ["latin"], variable: "--font-fraunces", display: "swap" })
+const workSans = Work_Sans({ weight: ["400", "600", "700"], subsets: ["latin"], variable: "--font-work-sans", display: "swap" })
+
+const fontVariables = [fraunces.variable, workSans.variable].join(" ")
+
+export const metadata: Metadata = {
+  title: {
+    default: `${business.name} | Brooklyn Dog Trainer ${business.owner}`,
+    template: `%s | ${business.name}`,
+  },
+  description: `${business.owner} has trained Brooklyn dogs for over 30 years. Positive, reward-based obedience, rehabilitation, and socialization for rescues, reactive dogs, and puppies. Never a shock collar.`,
 }
 
 export default function RootLayout({
@@ -13,13 +25,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={fontVariables} data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 max-w-6xl mx-auto px-6 py-12">
+        <main className="flex-1">
           {children}
         </main>
         <Footer />
+        <ScrollReveal />
       </body>
     </html>
   )
